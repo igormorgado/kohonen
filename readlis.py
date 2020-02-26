@@ -1,6 +1,10 @@
 import TotalDepth
 from TotalDepth.LIS.core import File
 from TotalDepth.LIS.core import FileIndexer
+from TotalDepth.LIS.core import LogiRec
+import scipy as sp
+import numpy as np
+import matplotlib.pyplot as plt
 
 import os
 
@@ -16,6 +20,31 @@ try:
     lis_idx = FileIndexer.FileIndex(lis_file)
 except RuntimeError as e:
     print(f'Error loading {filepath}')
+
+#cons_records = [lr for lr in lis_idx.genAll() if lr.lrType in LogiRec.LR_TYPE_TABLE_DATA]
+
+cons_records = list(lis_idx.genAll())
+DTSTS = []
+DTST = {}
+for n, x in enumerate(cons_records):
+    if x.lrType in LogiRec.LR_TYPE_TABLE_DATA:
+        lis_file.seekLr(x.tell)
+        table = LogiRec.LrTableRead(lis_file)
+        for row in table.genRows():
+            for col in row.genCells():
+                print(f'{col.mnem.decode("utf-8")}: {col.value.decode("utf-8")}', end='')
+                DTST[col.mnem.decode("utf-8")] = col.value.decode("utf-8")
+            print()
+
+    if x.lrType == LogiRec.LR_TYPE_FILE_TAIL:
+        DTSTS.append(DTST)
+        DTST = {}
+        print()
+
+#    print(f'Desc: {table.desc} value: {table.value}')
+#    print(f'colLabels: {table.colLabels()}')
+#    print(f'rowLabels: {table.rowLabels()}')
+#    print(table[b'WN   '][b'VALU'])
 
 # log_passes = list(lis_idx.genLogPasses())
 # lp = log_passes[0].logPass
@@ -49,15 +78,12 @@ except RuntimeError as e:
 # c1 = data[:,9]
 # c2 = data[:,10]
 # 
-# import scipy as sp
-# import numpy as np
 
 # new_x_c1 = np.linspace(0, len(c1), 5000)
 # new_x_c2 = np.linspace(0, len(c2), 5000)
 # new_c1 = sp.interpolate.interp1d(np.arange(len(c1)), c1, kind='cubic')(new_x_c1)
 # new_c2 = sp.interpolate.interp1d(np.arange(len(c2)), c2, kind='cubic')(new_x_c2)
 
-#import matplotlib.pyplot as plt
 #
 #fig, ax1 = plt.subplots(1, 1, figsize=(15,3), dpi=150)
 #
