@@ -11,6 +11,7 @@ import os
 
 dirname = 'data/input/lis'
 basename = '1API_0001__PR_1API_0001__PR.lis'
+basename = '1MB__0001__SC_1MB__0001__SC.lis'
 
 filepath = os.path.join(dirname, basename)
 
@@ -23,27 +24,31 @@ except RuntimeError as e:
 
 #cons_records = [lr for lr in lis_idx.genAll() if lr.lrType in LogiRec.LR_TYPE_TABLE_DATA]
 
-cons_records = list(lis_idx.genAll())
-DTSTS = []
-DTST = {}
-for n, x in enumerate(cons_records):
-    if x.lrType in LogiRec.LR_TYPE_TABLE_DATA:
-        lis_file.seekLr(x.tell)
-        table = LogiRec.LrTableRead(lis_file)
-        for row in table.genRows():
-            for col in row.genCells():
-                print(f'{col.mnem.decode("utf-8")}: {col.value.decode("utf-8")}', end='')
-                DTST[col.mnem.decode("utf-8")] = col.value.decode("utf-8")
-            print()
+# cons_records = list(lis_idx.genAll())
+# DTSTS = []
+# DTST = {}
+# for n, x in enumerate(cons_records):
+#     if x.lrType in LogiRec.LR_TYPE_TABLE_DATA:
+#         lis_file.seekLr(x.tell)
+#         table = LogiRec.LrTableRead(lis_file)
+#         for row in table.genRows():
+#             for col in row.genCells():
+#                 print(f'{col.mnem.decode("utf-8")}: {col.value.decode("utf-8")}', end='')
+#                 DTST[col.mnem.decode("utf-8")] = col.value.decode("utf-8")
+#             print()
+# 
+#     if x.lrType == LogiRec.LR_TYPE_FILE_TAIL:
+#         DTSTS.append(DTST)
+#         DTST = {}
+#         print()
+# 
+# for idx, dtst in enumerate(DTSTS):
+#     print(idx+1, dtst['WN  '])
 
-    if x.lrType == LogiRec.LR_TYPE_FILE_TAIL:
-        DTSTS.append(DTST)
-        DTST = {}
-        print()
 
-#    print(f'Desc: {table.desc} value: {table.value}')
-#    print(f'colLabels: {table.colLabels()}')
-#    print(f'rowLabels: {table.rowLabels()}')
+print(f'Desc: {table.desc} value: {table.value}')
+print(f'colLabels: {table.colLabels()}')
+print(f'rowLabels: {table.rowLabels()}')
 #    print(table[b'WN   '][b'VALU'])
 
 # log_passes = list(lis_idx.genLogPasses())

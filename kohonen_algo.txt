@@ -46,6 +46,11 @@ ADJ(N*) = {
 About Learning:
 ===============
 
-Cooling
+Cooling (eta function)
 
+
+Nu^n = Nu^0 ( 1 - (t / T)) * ()
+
+
+FIT:
 
