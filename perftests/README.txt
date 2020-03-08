@@ -15,3 +15,6 @@ Python:
         3.6 ms(scipy/cdist)
         5.8 ms(sklearn/euclidean_distances)
        31.2 ms(numpy/naive)
+	 .8 ms(scipy/cKDTree)
+	2.3 ms(tensorflow)
+

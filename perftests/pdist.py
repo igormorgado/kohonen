@@ -1,8 +1,10 @@
 import numpy as np
 import numba as nb
 import pandas as pd
+import tensorflow as tf
 from sklearn.metrics.pairwise import euclidean_distances
 from scipy.spatial.distance import cdist
+from scipy.spatial import cKDTree
 
 # TODO:
 #
@@ -114,14 +116,50 @@ def method7(R,W):
 
 
 def method8(R,W):
-    pass
+    # Converter W em n data points de dimensao m
+    wflat = W.reshape(N * M, F)
+    tree = cKDTree(wflat)
+    res = tree.query(R, k=1, n_jobs=-1)[1]
+    pos = lambda x: (x//N, x%N)
+    return np.apply_along_axis(pos, 0, res).T
+
+
+def pairwise_dist (A, B):  
+  """
+  Computes pairwise distances between each elements of A and each elements of B.
+  Args:
+    A,    [m,d] matrix
+    B,    [n,d] matrix
+  Returns:
+    D,    [m,n] matrix of pairwise distances
+  """
+  # squared norms of each row in A and B
+  na = tf.reduce_sum(tf.square(A), 1)
+  nb = tf.reduce_sum(tf.square(B), 1)
+  
+  # na as a row and nb as a co"lumn vectors
+  na = tf.reshape(na, [-1, 1])
+  nb = tf.reshape(nb, [1, -1])
+
+  # return pairwise euclidead difference matrix
+  D = tf.maximum(na - 2*tf.matmul(A, B, False, True) + nb, 0.0)
+  res = tf.argmin(D)
+  #pos = lambda x: (x//N, x%N)
+  #out = tf.vectorized_map(pos, res)
+  return res
 
 if __name__ == '__main__':
     print('Method 4\n', method4(R, W))
     print('Method 5\n', method5(R, W))
     print('Method 6\n', method6(R, W))
     print('Method 7\n', method7(R, W))
+    print('Method 8\n', method8(R, W))
     print('%timeit method4(R, W)')
     print('%timeit method5(R, W)')
     print('%timeit method6(R, W)')
     print('%timeit method7(R, W)')
+    print('%timeit method8(R, W)')
+    wflat = W.reshape(N * M, F)
+    A = tf.convert_to_tensor(wflat)
+    B = tf.convert_to_tensor(R)
+    # pairwise_dist(A, B)
