@@ -9,7 +9,7 @@ from scipy.spatial import cKDTree
 
 # TODO:
 #
-# Criar um metodo TTensorflow com eager variables em python direto,
+# Criar um metodo Tensorflow com eager variables em python direto,
 # estilo numba!
 
 
@@ -121,8 +121,8 @@ def method8(R,W):
     wflat = W.reshape(N * M, F)
     tree = cKDTree(wflat)
     res = tree.query(R, k=1, n_jobs=-1)[1]
-    pos = lambda x: (x//N, x%N)
-    return np.apply_along_axis(pos, 0, res).T
+    fn = lambda x: (x//N, x%N)
+    return np.apply_along_axis(fn, 0, res).T
 
 
 def method9(a, b):  
@@ -140,9 +140,27 @@ def method9(a, b):
   res = nr - 2*tf.matmul(a, b, False, True) + nw
   res = tf.argmin(res, axis=1)
   fn = lambda x: (x//N, x%N)
-  # This map takes a enormous amount of time
-  out = tf.map_fn(fn, res, dtype=(tf.int64, tf.int64))
-  return tf.stack(out, axis=1)
+  #out = tf.vectorized_map(fn, res)  # SLOW
+  #out = tf.map_fn(fn, res, dtype=(tf.int64, tf.int64))) # VERY SLOW
+  return np.apply_along_axis(fn, 0, res).T
+  #return tf.stack(out, axis=1)
+
+
+def method9_nomap(a, b):  
+  """Tensorflow matrix operation"""
+  # squared norms of each row in R and W
+  b = tf.reshape(b, (N*N,-1))
+  nr = tf.reduce_sum(tf.square(a), 1)
+  nw = tf.reduce_sum(tf.square(b), 1)
+  
+  # na as a row and nb as a column vectors
+  nr = tf.reshape(nr, [-1, 1])
+  nw = tf.reshape(nw, [1, -1])
+
+  # return pairwise euclidead difference matrix
+  res = nr - 2*tf.matmul(a, b, False, True) + nw
+  res = tf.argmin(res, axis=1)
+  return res
 
 if __name__ == '__main__':
     print('Method 4\n', method4(R, W))
@@ -152,7 +170,7 @@ if __name__ == '__main__':
     print('Method 8\n', method8(R, W))
     R_tf = tf.convert_to_tensor(R)
     W_tf = tf.convert_to_tensor(W)
-    print('Method 9\n', method9(R_tf, W_tf).numpy())
+    print('Method 9\n', method9(R_tf, W_tf))
     print('%timeit method4(R, W)')
     print('%timeit method5(R, W)')
     print('%timeit method6(R, W)')
