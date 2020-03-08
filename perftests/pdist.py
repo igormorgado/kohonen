@@ -2,14 +2,15 @@ import numpy as np
 import numba as nb
 import pandas as pd
 import tensorflow as tf
+tf.get_logger().setLevel('WARN')
 from sklearn.metrics.pairwise import euclidean_distances
 from scipy.spatial.distance import cdist
 from scipy.spatial import cKDTree
 
 # TODO:
 #
-# Método com Tensorflow
-# Método com busca em K-D Tree
+# Criar um metodo TTensorflow com eager variables em python direto,
+# estilo numba!
 
 
 # Size of Kohonen map (rows, columns)
@@ -124,29 +125,24 @@ def method8(R,W):
     return np.apply_along_axis(pos, 0, res).T
 
 
-def pairwise_dist (A, B):  
-  """
-  Computes pairwise distances between each elements of A and each elements of B.
-  Args:
-    A,    [m,d] matrix
-    B,    [n,d] matrix
-  Returns:
-    D,    [m,n] matrix of pairwise distances
-  """
-  # squared norms of each row in A and B
-  na = tf.reduce_sum(tf.square(A), 1)
-  nb = tf.reduce_sum(tf.square(B), 1)
+def method9(a, b):  
+  """Tensorflow matrix operation"""
+  # squared norms of each row in R and W
+  b = tf.reshape(b, (N*N,-1))
+  nr = tf.reduce_sum(tf.square(a), 1)
+  nw = tf.reduce_sum(tf.square(b), 1)
   
-  # na as a row and nb as a co"lumn vectors
-  na = tf.reshape(na, [-1, 1])
-  nb = tf.reshape(nb, [1, -1])
+  # na as a row and nb as a column vectors
+  nr = tf.reshape(nr, [-1, 1])
+  nw = tf.reshape(nw, [1, -1])
 
   # return pairwise euclidead difference matrix
-  D = tf.maximum(na - 2*tf.matmul(A, B, False, True) + nb, 0.0)
-  res = tf.argmin(D)
-  #pos = lambda x: (x//N, x%N)
-  #out = tf.vectorized_map(pos, res)
-  return res
+  res = nr - 2*tf.matmul(a, b, False, True) + nw
+  res = tf.argmin(res, axis=1)
+  fn = lambda x: (x//N, x%N)
+  # This map takes a enormous amount of time
+  out = tf.map_fn(fn, res, dtype=(tf.int64, tf.int64))
+  return tf.stack(out, axis=1)
 
 if __name__ == '__main__':
     print('Method 4\n', method4(R, W))
@@ -154,12 +150,12 @@ if __name__ == '__main__':
     print('Method 6\n', method6(R, W))
     print('Method 7\n', method7(R, W))
     print('Method 8\n', method8(R, W))
+    R_tf = tf.convert_to_tensor(R)
+    W_tf = tf.convert_to_tensor(W)
+    print('Method 9\n', method9(R_tf, W_tf).numpy())
     print('%timeit method4(R, W)')
     print('%timeit method5(R, W)')
     print('%timeit method6(R, W)')
     print('%timeit method7(R, W)')
     print('%timeit method8(R, W)')
-    wflat = W.reshape(N * M, F)
-    A = tf.convert_to_tensor(wflat)
-    B = tf.convert_to_tensor(R)
-    # pairwise_dist(A, B)
+    print('%timeit method9(R_tf, W_tf)')
