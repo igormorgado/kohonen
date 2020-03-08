@@ -4,6 +4,11 @@ import pandas as pd
 from sklearn.metrics.pairwise import euclidean_distances
 from scipy.spatial.distance import cdist
 
+# TODO:
+#
+# Método com Tensorflow
+# Método com busca em K-D Tree
+
 
 # Size of Kohonen map (rows, columns)
 N, M = 40, 40

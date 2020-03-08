@@ -158,7 +158,8 @@ PROGRAM kohonen
       END DO
    END DO
    CALL CPU_TIME(fim)
-   PRINT *, 'Ep', ih, 'tempo', (fim - inicio)/n_rep, 's'
+   PRINT *, 'Por loop', (fim - inicio)/(n_rep), 's'
+   PRINT *, 'Total   ', (fim-inicio), 's'
 
 
 
