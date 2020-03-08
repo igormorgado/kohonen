@@ -3,4 +3,6 @@ data/
 old/
 *.pyc
 *.lz
+a.out
+fdist
 
