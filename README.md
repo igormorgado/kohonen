@@ -14,8 +14,13 @@ Dado um espaço de N caracteristicas a serem modeladas. Criamos um tensor
 arbitrário de dimensões $M x N x O$, chamado $W$, onde $M x N$ é a dimensão
 cada camada do modelo Kohonen indexada por $i, j$.
 
+Cada camada definida por um plano $M x N$ presenta um atributo, assim se houver
+5 atribuitos ($O = 5$) teremos então um tensor de dimensões $M x N x 5$. 
+
 Por definição chamamos todos os $O$ valores da $i,j$-ésima posição do mapa
 como uma linha neuronal.
+
+TODO: Tamanho otimo do plano $N x M$.
 
 ### Treinamento
 
@@ -70,8 +75,10 @@ $$
 
 Função ETA de resfriamento é dada por
 
-Nu^n = Nu^0 ( 1 - (t / T)) * ()
+Nu^n = Nu^0 ( 1 - (t / T)) 
 
+onde: t = numero da iteração, T é o numero total de épocas e Nu é o fator de
+aprendizagem onde Nu^0 é o fator inicial arbitrario.
 
 ### Fitting
 
@@ -82,13 +89,13 @@ TODO: ESCREVER
 
 * Conseguir ler os dados LIS e DLIS ** FEITO
 * Filtragem dos dados para criar o dataset de entrada. Descobrir quais dados possuem todos os atributos
-* Escrever o kohonen baseado no kohonen.py e no kohonen.for no tensor flow 
+* Escrever o kohonen baseado no kohonen.py e no kohonen.for no tensor flow ** PARCIAL
 * Validar o código no tensor flow com o fortran usando o mesmo dataset.
 * Criar o programa de algoritmo genético multi-objetivo com o tensor flow utilizando o kohonen como critério de convergência
 * Gerar resultados. Pensar em como rodar o dado em múltiplas instituições. 
 * Escrever o artigo
 
-## Total: 192 dias 
+*Total*: 192 dias 
 
 ## Descricao dos codigos
 
@@ -126,7 +133,7 @@ analisadas:
 
 7. Matriz numpya com distancia calculada utilizando scipy.cdist.
 
-8. Matriz numpy conveertida em pontos de dados, distancias calculadas
+8. Matriz numpy convertida em pontos de dados, distancias calculadas
    utilizando cKDTrees.
 
 9. Matriz de diferencas utilizando tensores. Operações calculadas utilizando
@@ -160,7 +167,7 @@ Leitura de arquivo LIS utilizando a biblioteca TotalDepth, o codigo atual
 comentado permite: 1. listagem dos atribuitos, 2. Interpolacao de dados
 faltantes, 3. Geracao de grafico de poco com atribuitos selecionados.
 
-Este é a abordagem recomendada para o problema.
+*Este é a abordagem recomendada para o problema.*
 
 ### rock_ids_agp.txt
 
