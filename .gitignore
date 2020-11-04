@@ -5,4 +5,5 @@ old/
 *.lz
 a.out
 fdist
+venv/
 

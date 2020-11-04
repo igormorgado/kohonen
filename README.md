@@ -8,6 +8,33 @@ para a classificação. Inicialmente o método aplicado será o uso de algoritmo
 genéticos multi objetivos utilizando o modelo de Kohonen como função
 custo.
 
+## Criando o diretorio de projeto
+
+1. Crie o diretorio virtual
+
+```
+python3 -m venv  venv
+```
+
+2. Ative o diretorio virtual
+
+```
+source venv/bin/activate
+```
+
+3. Instale os requisitos
+
+```
+pip3 install -r requirements.txt
+```
+
+4. (opcional) Instale os requisitos de desenvolvimento
+
+```
+pip3 install -r requirements-dev.txt
+```
+
+
 ## Algoritmo de Kohonen
 
 Dado um espaço de N caracteristicas a serem modeladas. Criamos um tensor
@@ -149,6 +176,11 @@ analisadas:
 10. Matriz de difenrencas utilizando tensores.
 
 
+#### acoplador.py
+
+Adicona o programa que faz a filtragem de dados expúrios ferramentais,
+desmoronamentos e acopla o arquivo agp com o arquivo `*.las`. Gera imagem de
+análise e salva o dataframe.
 
 
 #### randomaccess.py
