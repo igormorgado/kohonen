@@ -184,7 +184,6 @@ aprendizagem onde Nu^0 é o fator inicial arbitrario.
 
 TODO: ESCREVER
 
-
 # Plano de trabalho: reunião de 14 de fevereiro de 2020
 
 * Conseguir ler os dados LIS e DLIS ** FEITO
@@ -199,9 +198,6 @@ TODO: ESCREVER
 
 ## TO DO (meeting de 18 de outubro de 2020)
  * Fazer o compartilhamento dos arquivos agp e DLIS via gdrive (Victor)
- * Seleção e upload dos dados compartilhados para a pasta inputs (Igor)
- * Fazer o upload para a pasta programs/src (nome mais comum) do programa de filtragem e acoplamento (Victor)
- * Fazer o upload dos programas que foram usados para testes decritos neste README (igor)
  
  
 ## Descricao dos codigos
