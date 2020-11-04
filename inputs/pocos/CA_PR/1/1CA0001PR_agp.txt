@@ -1,0 +1,727 @@
+ POCO           :   1CA  0001  PR       
+                                                                                                                                     
+ IDENTIFICADOR  :   SG22C41NO19R97A                         BACIA          :   PARANA                                                
+ CAMPO          :                                           DATUM          :   CORREGO ALEGRE                                        
+ LATITUDE       :   -24.52230 (  -24  31 20.3)              LONGITUDE      :   -51.38070 (  -51  22 50.5)                            
+ MERID.CENTRAL  :   - 51                                    COORD.UTM FUNDO:    7287855.2S  461433.6W                                
+ DISTRITO       :   E&P-SUL                                 ESTADO         :   PR                                                    
+ MUNICIPIO      :   CANDID ABREU                            CODIGO POCO    :   000530                                                
+ QUADRICULA     :   84728746                                MESA ROTATIVA  :    468.0                                                
+ B.A.P          :     465.2                                 P.F.SONDADOR   :   2791.6                                                
+ PROF.MX.PERF.  :   2791.6                                  METROS PERF.   :   2791.6                                                
+ MAIOR PROF.    :   2791.6                                  INICIO         :   07/04/56                                              
+ TERMINO        :   01/01/57                                DATA LIB.SONDA :   06/02/57                                              
+ ULT.RECLASSIF. :   06/02/57                                ULT.RECLASSIF. :   LOCACAO                                               
+ SITUACAO LOC.  :   CONCLUIDO                               DATA APROV.LOC :   23/01/56                                              
+ CADASTRO       :   07004                                   SEDOC          :   0009                                                  
+ SONDA          :   SC16                                    FORMACAO P.F.  :     SOLEIR                                              
+ TERRA / MAR    :   TERRA                                   ACS RISCO      :                                                         
+ CONTR. RISCO   :                                           DOC.APROV.LOC. :   DEPEX-DEPB/23-01-56                                   
+ NOME           :   CANDIDO ABREU.1                         CLASSIFICACAO  :   PIONEIRO                                              
+ RECLASSIFICACAO:   SECO COM INDICACAO DE GAS.                                                                                       
+ MC C.UTM BASE  :   - 51                                    COORD.UTM BASE :     7287855.2S    461433.6W                             
+ DADOS  LOCACAO :                                                                                                                    
+ MC LOCACAO     :   - 51                                    COORD.UTM LOC. :     7287855.2S   461433.6W                              
+ DATUM LOCACAO  :   CORREGO ALEGRE                          EMPR. OPER.1/2 :    PETROBRAS                                            
+ DIRECIONAL?    :   VERTICAL                                                                                                         
+ HISTORICO DA RECLASSIFICACAO -      06/02/57   -  SECO COM INDICACAO DE GAS.                            - RECLASSIFICACAO           
+-----------------                                                               
+ REVESTIMENTOS -         TIPO           PROFUNDIDADE        DIAMETRO       IND. DE RECUPERACAO                                       
+-----------------                                                               
+                    REV. SUPERFICIE     178.5  (  289.5)    10 3/4           NAO                                                     
+                    ALARGAMENTO         180.0  (  288.0)    16               NAO                                                     
+                    REV. PRODUCAO      1650.0  (-1182.0)     5 1/2           SIM                                                     
+------------------------------                                                  
+ PERDAS DE CIRCULACAO -  TIPO           TOPO                     BASE                VALOR DA PERDA                                  
+------------------------------                                                  
+                    PERDA PARCIAL       950.0  ( -482.0)         956.0   ( -488.0)       30.0                                        
+------------------------------                                                  
+ INTERVALOS TAMPONEADOS -TOPO                BASE                     TIPO DE TAMPAO                                                 
+------------------------------                                                  
+                         175.0   (  293.0)   185.0   (  283.0)        ABANDONO                                                       
+                        1544.5   (-1076.5)  1590.5   (-1122.0)        ABANDONO                                                       
+                        1639.0   (-1171.0)  1656.0   (-1188.5)        ISOLAMENTO                                                     
+-----------------------                                                         
+ UNID.VERTICALIZADAS -                                                                                                               
+-----------------------                                                         
+ TIP QL N O M E  CODIGO  TOPO / COTA     DESC. TOPO   BASE / COTA      DESC. BASE   MET TEMPO FONTE DE INTERPRETACAO       DATA      
+ L   B  G PASDOI 707060     3.0(  465.0) DISCORDANCIA  773.0 ( -305.)                B        E&P SUL/GERET                04/01/1995
+ L   B  F TERESI 728060     3.0(  465.0) DISCORDANCIA  378.0 (   90.)                B        E&P SUL/GERET                04/01/1995
+ L   B    SOLEIR 928099   378.0(   90.0) DISCORDANCIA  547.0 (  -79.)                E        E&P SUL/GERET                04/01/1995
+ L   B  F TERESI 728060   547.0(  -79.0)               630.0 ( -162.)                E        E&P SUL/GERET                04/01/1995
+ L   B  F SERALT 736060   630.0( -162.0)               719.0 ( -251.)                E        E&P SUL/GERET                04/01/1995
+ L   B  F IRATI  738060   719.0( -251.0)               720.0 ( -252.)                E        E&P SUL/GERET                04/01/1995
+ L   B    SOLEIR 928099   720.0( -252.0) DISCORDANCIA  746.0 ( -278.)                E        E&P SUL/GERET                04/01/1995
+ L   B  F IRATI  738060   746.0( -278.0)               773.0 ( -305.)                E        E&P SUL/GERET                04/01/1995
+ L   B  G GUATA  740060   773.0( -305.0)              1060.0 ( -592.)                E        E&P SUL/GERET                04/01/1995
+ L   B  F PALERM 744060   773.0( -305.0)               987.0 ( -519.)                E        E&P SUL/GERET                04/01/1995
+ L   B  F RBONIT 750060   987.0( -519.0)              1060.0 ( -592.)                E        E&P SUL/GERET                04/01/1995
+ L   B  M PARAGU 752060   987.0( -519.0)              1015.0 ( -547.)                E        E&P SUL/GERET                04/01/1995
+ L   B  M TRIUNF 753060  1015.0( -547.0)              1060.0 ( -592.)                E        E&P SUL/GERET                04/01/1995
+ L   B  G ITARAR 756062  1060.0( -592.0)              1618.0 (-1150.)                E        E&P SUL/GERET                04/01/1995
+ L   B  F TACIBA 758062  1060.0( -592.0)              1203.0 ( -735.)                E        E&P SUL/GERET                04/01/1995
+ L   B  M CHASOL 759062  1060.0( -592.0)              1203.0 ( -735.)                E        E&P SUL/GERET                04/01/1995
+ L   B  F CAMMOU 771064  1203.0( -735.0)              1618.0 (-1150.)                E        E&P SUL/GERET                04/01/1995
+ L   B  M RSEGRE 771364  1203.0( -735.0)              1618.0 (-1150.)                E        E&P SUL/GERET                04/01/1995
+ L   B  G PARANA 850050  1618.0(-1150.0) DISCORDANCIA                                E        E&P SUL/GERET                04/01/1995
+ L   B  F PONGRO 850080  1618.0(-1150.0) DISCORDANCIA 1790.0 (-1322.)                E        E&P SUL/GERET                04/01/1995
+ L   B    SOLEIR 928099  1790.0(-1322.0) DISCORDANCIA 2049.0 (-1581.)                E        E&P SUL/GERET                04/01/1995
+ L   B  F PONGRO 850080  2049.0(-1581.0)              2055.0 (-1587.)                E        E&P SUL/GERET                04/01/1995
+ L   B    SOLEIR 928099  2055.0(-1587.0) DISCORDANCIA 2075.0 (-1607.)                E        E&P SUL/GERET                04/01/1995
+ L   B  F PONGRO 850080  2075.0(-1607.0)              2130.0 (-1662.)                E        E&P SUL/GERET                04/01/1995
+ L   B    SOLEIR 928099  2130.0(-1662.0) DISCORDANCIA 2141.0 (-1673.)                E        E&P SUL/GERET                04/01/1995
+ L   B  F PONGRO 850080  2141.0(-1673.0)              2175.0 (-1707.)                E        E&P SUL/GERET                04/01/1995
+ L   B    SOLEIR 928099  2175.0(-1707.0) DISCORDANCIA 2199.0 (-1731.)                E        E&P SUL/GERET                04/01/1995
+ L   B  F PONGRO 850080  2199.0(-1731.0)              2250.0 (-1782.)                E        E&P SUL/GERET                04/01/1995
+ L   B    SOLEIR 928099  2250.0(-1782.0) DISCORDANCIA 2325.0 (-1857.)                E        E&P SUL/GERET                04/01/1995
+ L   B  F PONGRO 850080  2325.0(-1857.0)              2364.0 (-1896.)                E        E&P SUL/GERET                04/01/1995
+ L   B    SOLEIR 928099  2364.0(-1896.0) DISCORDANCIA 2378.0 (-1910.)                E        E&P SUL/GERET                04/01/1995
+ L   B  F PONGRO 850080  2378.0(-1910.0)              2598.0 (-2130.)                E        E&P SUL/GERET                04/01/1995
+ L   B  F FURNAS 878083  2598.0(-2130.0)              2781.0 (-2313.)                E        E&P SUL/GERET                04/01/1995
+ L   B    SOLEIR 928099  2781.0(-2313.0) DISCORDANCIA                                E        E&P SUL/GERET                04/01/1995
+-------------------------------                                                 
+ INDICIOS DE HIDROCARBONETOS -                                                                                                       
+-------------------------------                                                 
+ TIPO ORIGEM AMOSTRA   T O P O           B A S E      MODO      R O C H A        %       TIPO/COR/TONALIDADE        V/M  UGT   UGP   
+  O     L      C    1546.0 (-1078.0) 1554.0 (-1086.0)  N   ARENITO                5 PONTUAL/AMARELO  /CLARO         M/               
+  O     L      T    1547.0 (-1079.0) 1550.5 (-1082.5)  N   ARENITO                5 PONTUAL/AMARELO  /CLARO         M/               
+  O     L      C    1550.0 (-1082.0) 1554.0 (-1086.0)  N   ARENITO              100 PONTUAL/AMARELO  /CLARO         P/               
+  G     L      C    1626.0 (-1158.0) 1632.0 (-1164.0)  O   ARENITO              100         AMARELO  /CLARO          /               
+  G     L      T    1630.0 (-1162.0) 1630.6 (-1162.6)  O   ARENITO              100         AMARELO  /CLARO          /  0000  0000   
+  G     L      C    1630.6 (-1162.6) 1635.0 (-1167.0)  O   ARENITO              100         AMARELO  /CLARO          /               
+---------------                                                                 
+ TESTEMUNHOS -                                                                                                                       
+---------------                                                                 
+     TIPO DO TESTEMUNHO           NUMERO       TOPO / COTA        BASE / COTA     RECUPERADO  FLAG.EXISTENCIA      LITOTECA          
+  CONVENCIONAL (BROCA ROLAMENTO)   001       161.0 (  307.0)    167.0 (  301.0)      6.00           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   002       225.0 (  243.0)    228.0 (  240.0)      3.00           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   003       550.0 (  -82.0)    556.0 (  -88.0)      5.60           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   004       652.0 ( -184.0)    658.0 ( -190.0)      6.00           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   005       786.0 ( -318.0)    787.5 ( -319.5)      1.50           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   006       891.0 ( -423.0)    893.2 ( -425.2)      1.60           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   007      1008.0 ( -540.0)   1014.0 ( -546.0)      6.00           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   008      1062.0 ( -594.0)   1066.0 ( -598.0)      4.00           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   009      1199.0 ( -731.0)   1205.0 ( -737.0)      3.50           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   010      1307.5 ( -839.5)   1311.0 ( -843.0)      3.30           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   011      1419.0 ( -951.0)   1422.2 ( -954.2)      3.00           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   012      1547.0 (-1079.0)   1549.1 (-1081.1)      1.20           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   013      1549.1 (-1081.1)   1550.5 (-1082.5)      1.00           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   014      1600.2 (-1132.2)   1601.2 (-1133.2)      0.50           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   015      1630.0 (-1162.0)   1630.6 (-1162.6)      0.40           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   016      1667.5 (-1199.5)   1670.5 (-1202.5)      2.80           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   017      1670.5 (-1202.5)   1675.2 (-1207.2)      1.50           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   018      1675.2 (-1207.2)   1681.0 (-1213.0)      4.80           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   019      1681.0 (-1213.0)   1685.7 (-1217.7)      3.50           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   020      1685.7 (-1217.7)   1691.5 (-1223.5)      5.75           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   021      1691.5 (-1223.5)   1694.5 (-1226.5)      2.50           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   022      1787.5 (-1319.5)   1788.5 (-1320.5)      0.20           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   023      1960.0 (-1492.0)   1961.0 (-1493.0)      0.80           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   024      2049.5 (-1581.5)   2053.0 (-1585.0)      1.00           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   025      2090.0 (-1622.0)   2092.3 (-1624.3)      1.50           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   026      2146.0 (-1678.0)   2148.5 (-1680.5)      2.50           1             E&P-SUL            
+     TIPO DO TESTEMUNHO           NUMERO       TOPO / COTA        BASE / COTA     RECUPERADO  FLAG.EXISTENCIA      LITOTECA          
+  CONVENCIONAL (BROCA ROLAMENTO)   027      2200.0 (-1732.0)   2204.0 (-1736.0)      4.00           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   028      2326.0 (-1858.0)   2328.0 (-1860.0)      1.30           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   029      2457.0 (-1989.0)   2460.5 (-1992.5)      3.50           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   030      2603.7 (-2135.7)   2608.2 (-2140.2)      3.20           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   031      2738.5 (-2270.5)   2740.7 (-2272.7)      1.75           1             E&P-SUL            
+  CONVENCIONAL (BROCA ROLAMENTO)   032      2782.5 (-2314.5)   2782.8 (-2314.8)      0.18           1             E&P-SUL            
+------------------------                                                        
+ OBJETIVOS E RESULTADOS - SEQ.   COD./NOME UNIDADE   STATUS INICIAL DO OBJETIVO           RESULTADO DO OBJETIVO                      
+------------------------                                                        
+                           01    850080 / F PONGRO   PRINCIPAL                         PORTADOR DE AGUA                              
+                           02    757062 / F ITAIND   SECUNDARIO                        PORTADOR DE AGUA                              
+----------------------                                                          
+ TESTES DE FORMACAO -                                                                                                                
+----------------------                                                          
+
+
+ NUMERO - TFR 03                                                                                                                     
+ * INFORMACOES GERAIS *                                                                                                              
+ DATA : 06/02/1957         TIPO : A POCO REVESTIDO                  CIA : HALLIBURTON                                                
+ TOPO : 1545.0 M           BASE : 1590.0M                           PROF. POCO TESTE :  2791.6 M                                     
+ DIAMETRO :  400 POL       PROF. TOPO TAMPAO :  1590.0 M                                                                             
+ TEMP. MAX. TESTE : 135 F  FONTE DA TEMP. MAX. : REGISTRADOR MECANICO                                                                
+ OBJETIVO : VERIFICACAO DE FLUIDO E PRESSAO                                                                                          
+ MOTIVO : INDICIO DE HC DURANTE PERF.EM A.DE CALHA                                                                                   
+ RESULTADO : CONCLUSIVO (QUALITATIVO OU QUANTITATIVO)                                                                                
+ **** OBSERVACOES ****                                                                                                               
+  A IMEDIATO FRACO DE AR, DECRESCENTE, MORRENDO AOS 22 MINUTOS. 0,3 M3 (114 METROS DE COLUNA) DE LAM                                 
+  B A. LAMA LAMA (SEM ANALISE) INTERVALOS CANHONEADOS: 1545/1555M, 1563/1568M,E 1580/1590M. NAO HOUV                                 
+  C E REGISTRO DE PRESSAO ESTATICA TESTE CONCLUSIVO INTERVALO FECHADO(PELA FEICAO DA CURVA DE FLUXO)                                 
+  D   PRESSOES EM KGF/CM2 REG. J-200 A 1588 M PHI/PHF= 189.3/189.6 PFI= 32.7  PFF=32.7                                               
+                                                                                                                                     
+ **** RECUPERACAO NA COLUNA ***                                                                                                      
+ FLUIDO RECUPERADO :     LAMA                                      VOLUME :  0.30M3       MODO DE RECUPERACAO : RETIRADA NORMAL      
+
+
+ NUMERO - TFR 02                                                                                                                     
+ * INFORMACOES GERAIS *                                                                                                              
+ DATA : 04/02/1957         TIPO : A POCO REVESTIDO                  CIA : HALLIBURTON                                                
+ TOPO : 1595.0 M           BASE : 1638.0M                           PROF. POCO TESTE :  2791.6 M                                     
+ DIAMETRO :  400 POL       PROF. TOPO TAMPAO :  1638.0 M                                                                             
+ TEMP. MAX. TESTE : 136 F  FONTE DA TEMP. MAX. : REGISTRADOR MECANICO                                                                
+ OBJETIVO : VERIFICACAO DE FLUIDO E PRESSAO                                                                                          
+ MOTIVO : INDICIO DE HC DURANTE PERF.EM A.DE CALHA                                                                                   
+ RESULTADO : CONCLUSIVO (QUALITATIVO OU QUANTITATIVO)                                                                                
+ **** OBSERVACOES ****                                                                                                               
+  A IMEDIATO FRACO DE AR DECRESCENTE MORRENDO AOS 19 MINUTOS. 0,3 M3 (114 METROS DE COLUNA) COM LAMA                                 
+  B  LAMA (NAO QUANTIFICADA) LAMA (SEM ANALISE) INTERVALOS CANHONEADOS:1595/1617M,1622/1626M E 1631/                                 
+  C 1638M. NAO HOUVE REGISTRO DE PRESSAO ESTATICA.   CURVA DE FLUXO INDICA INTERVALO FECHADO. TESTE                                  
+  D CONCLUSIVO INTERVALO FECHADO. PRESSOES EM KGF/CM2 REG. J-200 A 1636M: PHI/PHF=189,7/190,4  PFI=                                  
+  E 49,9 PFF=49,9                                                                                                                    
+ **** RECUPERACAO NA COLUNA ***                                                                                                      
+                                                                                                                                     
+ **** RECUPERACAO NA COLUNA ***                                                                                                      
+ FLUIDO RECUPERADO :     LAMA                                      VOLUME :  0.30M3       MODO DE RECUPERACAO : RETIRADA NORMAL      
+
+
+ NUMERO - TFR 02A                                                                                                                    
+ * INFORMACOES GERAIS *                                                                                                              
+ DATA : 04/02/1957         TIPO : A POCO REVESTIDO                  CIA : HALLIBURTON                                                
+ TOPO : 1595.0 M           BASE : 1638.0M                           PROF. POCO TESTE :  2791.6 M                                     
+ DIAMETRO :  400 POL       PROF. TOPO TAMPAO :  1638.0 M                                                                             
+ TEMP. MAX. TESTE : 136 F  FONTE DA TEMP. MAX. : REGISTRADOR MECANICO                                                                
+ OBJETIVO : VERIFICACAO DE FLUIDO E PRESSAO                                                                                          
+ MOTIVO : INDICIO DE HC DURANTE PERF.EM A.DE CALHA                                                                                   
+ RESULTADO : CONCLUSIVO (QUALITATIVO OU QUANTITATIVO)                                                                                
+ **** OBSERVACOES ****                                                                                                               
+  A IMEDIATO FRACO DE AR DECRESCENTE MORRENDO AOS 24 MINUTOS. 0,7 M3 (256 METROS DE COLUNA) DE LAMA,                                 
+  B  SEGUNDO O OBSERVADOR. INTERVALOS CANHONEADOS: 1595/1617M, 1622/1626M, 1631/1638M. NAO HOUVE REG                                 
+  C ISTRO DE PRESSAO ESTATICA. TESTE CONCLUSIVO INTERVALO FECHADO (PELA FEICAO DA CURVA DE FLUXO).                                   
+ **** RECUPERACAO NA COLUNA ***                                                                                                      
+ FLUIDO RECUPERADO :     LAMA                                      VOLUME :  0.70M3       MODO DE RECUPERACAO : RETIRADA NORMAL      
+                                                                                                                                     
+
+
+ NUMERO - TFC 01A                                                                                                                    
+ * INFORMACOES GERAIS *                                                                                                              
+ DATA : 24/09/1956         TIPO : CONVENCIONAL                      CIA : HALLIBURTON                                                
+ TOPO : 1617.1 M           BASE : 1667.5M                           PROF. POCO TESTE :  1667.5 M                                     
+ DIAMETRO :  858 POL       PROF. TOPO TAMPAO :                                                                                       
+ TEMP. MAX. TESTE : 137 F  FONTE DA TEMP. MAX. : REGISTRADOR MECANICO                                                                
+ OBJETIVO : VERIFICACAO DE FLUIDO E PRESSAO                                                                                          
+ MOTIVO : INDICIO DE HC DURANTE PERF.EM A.DE CALHA                                                                                   
+ RESULTADO : FALHO - OBTURADOR NAO ASSENTOU                                                                                          
+ **** OBSERVACOES ****                                                                                                               
+  A TESTE FALHO DEVIDO NAO ASSENTAMENTO DO OBTURADOR .                                                                               
+ **** REGISTRADORES DE PRESSAO ****                                                                                                  
+ NUMERO :   837                        PROFUNDIDADE : 1665.0 M               TIPO : 200-J                                            
+ POSICAO RELATIVA : EXTERNO INFERIOR   CAPACIDADE :  5000 PSI                "M" :  77.773000 KGF/CM2/POL                            
+ "A" :   3.345600 KGF/CM2              NUMERO DO RELOGIO :   000             CAPACIDADE DO RELOGIO :  12 H                           
+  N.TESTE REGISTRADOR  TEMPO/PRESSAO   TEMPO/PRESSAO   TEMPO/PRESSAO   TEMPO/PRESSAO   TEMPO/PRESSAO   TEMPO/PRESSAO   TEMPO/PRESSAO 
+  01 A C     837         000/  3346     1275/  5057     2542/ 11901     3604/ 34688     4340/ 51176     5128/ 67508     6039/ 87885  
+  01 A C     837        6922/111761     7267/126305     7975/127160     8486/140459     8744/148392     9298/164025     9837/182768  
+  01 A C     837       10312/201900    10585/211544    10617/256030    10625/207189    10688/207189    11187/215666    11682/222121  
+  01 A C     837       11900/203767    12015/196378    12676/225543    12680/ 99706    12886/216521    12921/189223    13040/215666  
+  01 A C     837       13127/207733    13127/147148    13175/200034    13935/210222    14763/210222    14763/195367    14925/212244  
+  01 A C     837       16303/211311    16307/187668    16715/206644    17202/170246    17210/184323    17274/165113    17606/194745  
+  01 A C     837       17883/189845    18050/164880    18192/191478    18869/173824    19436/155625    19887/139371    21012/113550  
+  01 A C     837       21400/107873    21982/ 94418    22707/ 72952    23475/ 60742    24271/ 52654    25360/ 37955    26591/ 21078  
+  01 A C     837       27724/ 10967    28853/  3657    29847/  3346    30607/  3346                                                  
+                                                                                                                                     
+
+
+ NUMERO - TFC 01                                                                                                                     
+ * INFORMACOES GERAIS *                                                                                                              
+ DATA : 23/09/1956         TIPO : CONVENCIONAL                      CIA : HALLIBURTON                                                
+ TOPO : 1619.8 M           BASE : 1667.5M                           PROF. POCO TESTE :  1667.5 M                                     
+ DIAMETRO :  858 POL       PROF. TOPO TAMPAO :                                                                                       
+ TEMP. MAX. TESTE : 137 F  FONTE DA TEMP. MAX. : REGISTRADOR MECANICO                                                                
+ OBJETIVO : VERIFICACAO DE FLUIDO E PRESSAO                                                                                          
+ MOTIVO : INDICIO DE HC DURANTE PERF.EM A.DE CALHA                                                                                   
+ RESULTADO : FALHO - OBTURADOR DESASSENTOU                                                                                           
+ **** OBSERVACOES ****                                                                                                               
+  A SOPRO NULO. 251 METROS DE COLUNA LEVEMENTE CORTADA POR GAS. TESTE FALHO, DEVIDO  DESASSENTAMENTO                                 
+  B DO OBTURADOR NO INICIO DO FLUXO.                                                                                                 
+ **** REGISTRADORES DE PRESSAO ****                                                                                                  
+ NUMERO :   837                        PROFUNDIDADE : 1665.0 M               TIPO : 200-J                                            
+ POSICAO RELATIVA : EXTERNO INFERIOR   CAPACIDADE :  5000 PSI                "M" :  77.773000 KGF/CM2/POL                            
+ "A" :   3.345600 KGF/CM2              NUMERO DO RELOGIO :   000             CAPACIDADE DO RELOGIO :  12 H                           
+
+
+ NUMERO - TFR 01                                                                                                                     
+                                                                                                                                     
+ * INFORMACOES GERAIS *                                                                                                              
+ DATA : 03/02/1957         TIPO : A POCO REVESTIDO                  CIA : HALLIBURTON                                                
+ TOPO : 1622.0 M           BASE : 1638.0M                           PROF. POCO TESTE :  2791.6 M                                     
+ DIAMETRO :  400 POL       PROF. TOPO TAMPAO :  1639.0 M                                                                             
+ TEMP. MAX. TESTE : 136 F  FONTE DA TEMP. MAX. : REGISTRADOR MECANICO                                                                
+ OBJETIVO : VERIFICACAO DE FLUIDO E PRESSAO                                                                                          
+ MOTIVO : INDICIO DE HC DURANTE PERF.EM A.DE CALHA                                                                                   
+ RESULTADO : CONCLUSIVO (QUALITATIVO OU QUANTITATIVO)                                                                                
+ **** OBSERVACOES ****                                                                                                               
+  A FLUXO-1: IMEDIATO FRACO DE AR MORRENDO AOS 16 MINUTOS FLUXO-2: IMEDIATO FRAQUISSIMO DE AR MORREN                                 
+  B DO AOS 8 MINNUTOS. 0,4 M3 (143 METROS DE COLUNA) DE LAMA LEVEMENTE CORTADA POR GAS. INTERVALOS C                                 
+  C ANHONEADOS: 1622/1626M E 1631/1638M. NAO SE DISPOE DA PRESSAO ESTATICA. NO SEGUNDO REASSENTAMENT                                 
+  D O DO OBTURADOR HOUVE ENTRADA DE PEQUENA QUANTIDADE DE LAMA INCREMENTANDO A PRESSAO DE FLUXO. CAR                                 
+  E TA INDICA INTERVALO DE BAIXISSIMA PERMEABILIDADE, SEM INDICACAO DO FLUIDO DA FORMACAO.                                           
+ **** RECUPERACAO NA COLUNA ***                                                                                                      
+ FLUIDO RECUPERADO :     LAMA                                      VOLUME :  0.40M3       MODO DE RECUPERACAO : RETIRADA NORMAL      
+
+
+ NUMERO - TFC 01B                                                                                                                    
+                                                                                                                                     
+ * INFORMACOES GERAIS *                                                                                                              
+ DATA : 29/09/1956         TIPO : CONVENCIONAL                      CIA : HALLIBURTON                                                
+ TOPO : 1622.3 M           BASE : 1670.5M                           PROF. POCO TESTE :  1670.5 M                                     
+ DIAMETRO :  858 POL       PROF. TOPO TAMPAO :                                                                                       
+ TEMP. MAX. TESTE : 137 F  FONTE DA TEMP. MAX. : REGISTRADOR MECANICO                                                                
+ OBJETIVO : VERIFICACAO DE FLUIDO E PRESSAO                                                                                          
+ MOTIVO : INDICIO DE HC DURANTE PERF.EM A.DE CALHA                                                                                   
+ RESULTADO : FALHO - OBTURADOR NAO ASSENTOU                                                                                          
+ **** OBSERVACOES ****                                                                                                               
+  A TESTE FALHO DEVIDO NAO ASSENTAMENTO DO OBTURADOR .                                                                               
+ **** REGISTRADORES DE PRESSAO ****                                                                                                  
+ NUMERO :   837                        PROFUNDIDADE : 1668.0 M               TIPO : 200-J                                            
+ POSICAO RELATIVA : EXTERNO INFERIOR   CAPACIDADE :  5000 PSI                "M" :  77.773000 KGF/CM2/POL                            
+ "A" :   3.345600 KGF/CM2              NUMERO DO RELOGIO :   000             CAPACIDADE DO RELOGIO :  12 H                           
+  N.TESTE REGISTRADOR  TEMPO/PRESSAO   TEMPO/PRESSAO   TEMPO/PRESSAO   TEMPO/PRESSAO   TEMPO/PRESSAO   TEMPO/PRESSAO   TEMPO/PRESSAO 
+  01 B C     837         000/  3346     2008/  3346     3219/  8090     3924/ 15634     4978/ 42932     5984/ 74586     7013/ 99629  
+  01 B C     837        7872/123272     8637/152048     9243/175457     9761/194201    10668/222588    10850/230054    11116/230054  
+  01 B C     837       11124/155625    11136/217377    11143/158658    11159/229276    11223/229276    11270/226243    11401/228654  
+  01 B C     837       11631/226165    11638/113861    11654/228732    11706/116194    11793/124205    11821/236509    11840/110595  
+  01 B C     837       11864/230598    12137/230598    12157/221110    12260/221110    12280/230209    12308/216832    12696/230365  
+  01 B C     837       12696/156092    12969/230132    13583/227798    13908/229587    13908/159125    13951/232620    14098/228110  
+  01 B C     837       14775/207422    15309/192878    15943/176857    16620/159903    17436/138593    18153/118450    18739/100406  
+  01 B C     837       19226/ 82830    19737/ 62920    20216/ 47832    20636/ 35155    21182/ 19056    21828/ 14623    22172/ 10967  
+  01 B C     837       22469/  3501    22722/  3346    22909/  3346                                                                  
+                                                                                                                                     
+
+
+ NUMERO - TFO 02                                                                                                                     
+ * INFORMACOES GERAIS *                                                                                                              
+ DATA : 27/01/1957         TIPO : CONVENC.-ANCORA  TAMPAO           CIA : HALLIBURTON                                                
+ TOPO : 1650.0 M           BASE : 1681.0M                           PROF. POCO TESTE :  2791.6 M                                     
+ DIAMETRO :  858 POL       PROF. TOPO TAMPAO :  1681.0 M                                                                             
+ TEMP. MAX. TESTE : 137 F  FONTE DA TEMP. MAX. : REGISTRADOR MECANICO                                                                
+ OBJETIVO : VERIFICACAO DE FLUIDO E PRESSAO                                                                                          
+ MOTIVO : INDICIO DE HC DURANTE PERF.EM A.DE CALHA                                                                                   
+ RESULTADO : SUSPENSO - FERRAMENTA TOPOU                                                                                             
+ **** OBSERVACOES ****                                                                                                               
+  A TESTE FALHO. A FERRAMENTA DE TESTE TOPOU NO COLAR DO REVESTIMENTO DE 5 1/2". APOS A DESCIDA DO R                                 
+  B EVESTIMENTO DE PRODUCAO (5 1/2") E CORTE DE CIMENTO ATE A PROFUNDIDADE DE 1681 METROS OCORREU FL                                 
+  C UXO DE AGUA SALGADA/GAS A SUPERFICIE, SENDO COMBATIDA COM INCREMENTO NO PESO DA LAMA.                                            
+ **** DADOS DO FLUIDO DE PERFURACAO ****                                                                                             
+ FONTE DADOS FLUIDO : CAMPO              FLUIDO : CONVENCIONAL C/ CAL                                                                
+ DENSIDADE :  10.2                       VISCOSIDADE MARSH :  52 API            MEDIDA DE PH :   .                                   
+ SALINIDADE : .100 MG/L DE NACL * 1000   % OLEO FLUIDO PERF. :                  CONCENTRACAO CATION CA+2 :                           
+ CONCENTRACAO MG+2 :                     CONCENTRACAO DO TRACADOR :             TIPO DO TRACADOR :                                   
+                                                                                                                                     
+
+
+ NUMERO - TFO 02A                                                                                                                    
+ * INFORMACOES GERAIS *                                                                                                              
+ DATA : 28/01/1957         TIPO : CONVENC.-ANCORA  TAMPAO           CIA : HALLIBURTON                                                
+ TOPO : 1650.0 M           BASE : 1681.0M                           PROF. POCO TESTE :  2791.6 M                                     
+ DIAMETRO :  858 POL       PROF. TOPO TAMPAO :  1681.0 M                                                                             
+ TEMP. MAX. TESTE : 137 F  FONTE DA TEMP. MAX. : REGISTRADOR MECANICO                                                                
+ OBJETIVO : VERIFICACAO DE FLUIDO E PRESSAO                                                                                          
+ MOTIVO : INDICIO DE HC DURANTE PERF.EM A.DE CALHA                                                                                   
+ RESULTADO : SUSPENSO - FERRAMENTA TOPOU                                                                                             
+ **** OBSERVACOES ****                                                                                                               
+  A  TESTE FALHO, FERRAMENTA NAO PASSOU PELO " FLOAT COLLAR " DO REVESTIMENTO DE PRODUCAO.                                           
+ **** REGISTRADORES DE PRESSAO ****                                                                                                  
+ NUMERO :   000                        PROFUNDIDADE : 1679.0 M               TIPO : 200-J                                            
+ POSICAO RELATIVA : EXTERNO INFERIOR   CAPACIDADE :  5000 PSI                "M" :  91.244600 KGF/CM2/POL                            
+ "A" :   9.776000 KGF/CM2              NUMERO DO RELOGIO :   000             CAPACIDADE DO RELOGIO :  12 H                           
+
+
+ NUMERO - TFO 02B                                                                                                                    
+                                                                                                                                     
+ * INFORMACOES GERAIS *                                                                                                              
+ DATA : 29/01/1957         TIPO : CONVENC.-ANCORA  TAMPAO           CIA : HALLIBURTON                                                
+ TOPO : 1650.0 M           BASE : 1681.0M                           PROF. POCO TESTE :  2791.6 M                                     
+ DIAMETRO :  858 POL       PROF. TOPO TAMPAO :  1681.0 M                                                                             
+ TEMP. MAX. TESTE : 137 F  FONTE DA TEMP. MAX. : REGISTRADOR MECANICO                                                                
+ OBJETIVO : VERIFICACAO DE FLUIDO E PRESSAO                                                                                          
+ MOTIVO : INDICIO DE HC DURANTE PERF.EM A.DE CALHA                                                                                   
+ RESULTADO : CONCLUSIVO (QUALITATIVO OU QUANTITATIVO)                                                                                
+ **** OBSERVACOES ****                                                                                                               
+  A IMEDIATO FRACO DE AR, CRESCENTE MODERADO ATE OS 27 MINUTOS, DECRESCENTE ATE O FINAL. 2,3 M3 (840                                 
+  B  METROS DE COLUNA) DE AGUA/LAMA CORTADAS POR GAS AGUA (SEM QUANTIFICACAO) AGUA (SEM ANALISE) NAO                                 
+  C  HOUVE REGISTRO DA PRESSAO ESTATICA. PRESSAO DE FLUXO FINAL INCOMPATIVEL COM A ALTURA DO RECUPER                                 
+  D ADO REPORTADO.FEICAO DA CURVA DE FLUXO PODE INDICAR AMORTECIMENTO OU ENTUPIMNETO EXTERNO TOTAL A                                 
+  E NTES DO FINAL DO FLUXO (CARTA DE PAPEL MAL RISCADA). TESTE CONCLUSIVO INTERVALO DE ALTA PERMEABI                                 
+  F LIDADE PORTADOR DE AGUA E, SECUNDARIAMENTE GAS. PRESSOES EM KGF/C2 REG. J-200 A 1679 METROS: PHI                                 
+  G =212.4 PHF= 210.3 PFI=45.9 PFF=113.0                                                                                             
+ **** DADOS DO FLUIDO DE PERFURACAO ****                                                                                             
+ FONTE DADOS FLUIDO : CAMPO              FLUIDO : CONVENCIONAL C/ CAL                                                                
+ DENSIDADE :  10.2                       VISCOSIDADE MARSH :  52 API            MEDIDA DE PH :   .                                   
+ SALINIDADE :                            % OLEO FLUIDO PERF. :                  CONCENTRACAO CATION CA+2 :                           
+ CONCENTRACAO MG+2 :                     CONCENTRACAO DO TRACADOR :             TIPO DO TRACADOR :                                   
+ **** RECUPERACAO NA COLUNA ***                                                                                                      
+ FLUIDO RECUPERADO :     AGUA                                      VOLUME :  2.30M3       MODO DE RECUPERACAO : RETIRADA NORMAL      
+ **** AMOSTRAGEM E ANALISE DO RECUPERADO ****                                                                                        
+ POSICAO DE COLETA DA AMOSTRA : INF. NAO EXISTENTE                  TIPO DO FLUIDO: AGUA                                             
+ FONTE DE DADOS DE ANALISE : DADO NAO REVISTO                       VISCOSIDADE :   0.00 CP                API DA AMOSTRA A 60 F :   
+                                                                                                                                     
+ **** AMOSTRAGEM E ANALISE DO RECUPERADO ****                                                                                        
+ CONCENTRADOR TRACADOR DE AMOSTRA :                                 TIPO DE TRACADOR :                     RW A 75 F :               
+ CONCENTRACAO DE H2S DA AMOSTRA :                                   MEDIDA DE PH DA AMOSTRA :              % OLEO DA AMOSTRA :       
+ CONCENTRACAO DO CATION CA+2 DA AMOSTRA :                           CONCENTRACAO SALINIDADE DA AMOSTRA :                             
+ CONCENTRACAO DO CATION MG+2 DA AMOSTRA :                           DENSIDADE RELATIVA DA AMOSTRA :                                  
+ VOL. COLETADO AMOSTRA RECUP: 02.5 LITROS                                                                                            
+
+
+ NUMERO - TFO 02C                                                                                                                    
+ * INFORMACOES GERAIS *                                                                                                              
+ DATA : 29/01/1957         TIPO : CONVENC.-ANCORA  TAMPAO           CIA : HALLIBURTON                                                
+ TOPO : 1650.0 M           BASE : 1681.0M                           PROF. POCO TESTE :  2791.6 M                                     
+ DIAMETRO :  858 POL       PROF. TOPO TAMPAO :  1681.0 M                                                                             
+ TEMP. MAX. TESTE : 137 F  FONTE DA TEMP. MAX. : REGISTRADOR MECANICO                                                                
+ OBJETIVO : VERIFICACAO DE FLUIDO E PRESSAO                                                                                          
+ MOTIVO : INDICIO DE HC DURANTE PERF.EM A.DE CALHA                                                                                   
+ RESULTADO : CONCLUSIVO (QUALITATIVO OU QUANTITATIVO)                                                                                
+ **** OBSERVACOES ****                                                                                                               
+  A IMEDIATO FORTE DE AR MORRENDO AOS 28 MINUTOS. 1,08 M3(385 METROS DE COLUNA) DE AGUA/LAMA CORTADA                                 
+  B S POR GAS AGUA (SEM QUANTIFICACAO) AGUA (SEM ANALISE) NAO HOUVE REGISTRO DE PRESSAO ESTATICA. AP                                 
+  C OS CESSADO SOPRO FOI EFETUADA TENTATIVA DE PISTONEIO, SEM SUCESSO DEVIDO SWAB NAO DESCER DENTRO                                  
+  D DA EMULSAO AGUA/LAMA/GAS. TESTE CONCLUSIVO INTERVALO DE ALTA PERMEABILIDADE PORTADOR DE AGUA/GAS                                 
+  E . OBS: ALTURA DO RECUPERADO INCOMPATIVEL COM A PRESSAO DE FLUXO FINAL. PRESSOES EM KGF/CM2 REG.                                  
+                                                                                                                                     
+ **** OBSERVACOES ****                                                                                                               
+  F J-200 A 1679M: PHI/PHF=20 4.1/205.0  PFI=10.8  PFF=52.8                                                                          
+ **** DADOS DO FLUIDO DE PERFURACAO ****                                                                                             
+ FONTE DADOS FLUIDO : CAMPO              FLUIDO : CONVENCIONAL C/ CAL                                                                
+ DENSIDADE :  10.2                       VISCOSIDADE MARSH :  50 API            MEDIDA DE PH :   .                                   
+ SALINIDADE :                            % OLEO FLUIDO PERF. :                  CONCENTRACAO CATION CA+2 :                           
+ CONCENTRACAO MG+2 :                     CONCENTRACAO DO TRACADOR :             TIPO DO TRACADOR :                                   
+ **** RECUPERACAO NA COLUNA ***                                                                                                      
+ FLUIDO RECUPERADO :     AGUA SALGADA                              VOLUME :  1.08M3       MODO DE RECUPERACAO : RETIRADA NORMAL      
+
+
+ NUMERO - TFO 02D                                                                                                                    
+ * INFORMACOES GERAIS *                                                                                                              
+ DATA : 30/01/1957         TIPO : CONVENC.-ANCORA  TAMPAO           CIA : HALLIBURTON                                                
+ TOPO : 1650.0 M           BASE : 1681.0M                           PROF. POCO TESTE :  2791.6 M                                     
+ DIAMETRO :  858 POL       PROF. TOPO TAMPAO :  1681.0 M                                                                             
+ TEMP. MAX. TESTE : 137 F  FONTE DA TEMP. MAX. : REGISTRADOR MECANICO                                                                
+ OBJETIVO : VERIFICACAO DE FLUIDO E PRESSAO                                                                                          
+ MOTIVO : INDICIO DE HC DURANTE PERF.EM A.DE CALHA                                                                                   
+ RESULTADO : CONCLUSIVO (QUALITATIVO OU QUANTITATIVO)                                                                                
+                                                                                                                                     
+ **** OBSERVACOES ****                                                                                                               
+  A FLUXO-1 SOPRO NULO FLUXO-2: IMEDIATO MODERADO DE AR MORRENDO AOS 14 MINUTOS. 0.37 M3 (134 METROS                                 
+  B  DE COLUNA) DE AGUA/LAMA CORTADA POR GAS. AGUA (SEM QUANTIFICACAO) AGUA SALGADA (SEM ANALISE) NA                                 
+  C O HOUVE REGISTRO DE PRESSAO ESTATICA. EFETUADO NOVO REASSENTAMENTO DO PACKER APOS 5 MINUTOS DE F                                 
+  D LUXO. COMPARACAO DO VOLUME RECUPERADO ( E PRESSAO DE FLUXO FINAL ) EM RELACAO AO TF-2C OBSERVA-S                                 
+  E E UM DECRESCIMO DE 18 KGF/CM2 NO ULTIMO QUE PODE REPRESENTAR DANO OU DEPLECAO. TESTE CONCLUSIVO                                  
+  F INTERVALO PORTADOR DE AGUA E SECUNDARIAMENTE, GAS.                                                                               
+ **** RECUPERACAO NA COLUNA ***                                                                                                      
+ FLUIDO RECUPERADO :     AGUA SALGADA                              VOLUME :  0.37M3       MODO DE RECUPERACAO : RETIRADA NORMAL      
+----------------------------------                                              
+  PERFIS: AQUISICAO/PROCESSAMENTO                                                                                                    
+----------------------------------                                              
+   COD  GR  TIPO           CIA   COR DESC    DATA           TOPO            BASE                                                     
+   ---  --  ----           ---   --- ----    ----           ----            ----                                                     
+                                                                                                                                     
+----------------------------------                                              
+  PERFIS: AQUISICAO/PROCESSAMENTO                                                                                                    
+----------------------------------                                              
+   COD  GR  TIPO           CIA   COR DESC    DATA           TOPO            BASE                                                     
+   ---  --  ----           ---   --- ----    ----           ----            ----                                                     
+   001  01  EL             HALL  01    A  13/04/1957    22.0(   446.0)  275.0(   193.0)                                              
+   215  02  CAL                        A                22.0(   446.0)  275.0(   193.0)                                              
+   001  02  EL             HALL  02    A  11/08/1956   178.5(   289.5)  797.0(  -329.0)                                              
+   001  01  EL             HALL  03    B  05/10/1956   790.0(  -322.0) 1798.6( -1330.6)                                              
+   215  01  CAL            HALL  04    B  01/01/1957   178.5(   289.5) 2791.6( -2323.6)                                              
+   001  02  EL                         A               178.5(   289.5) 2791.6( -2323.6)                                              
+------------------------------------------------------                          
+ PERFIS: REGISTRO DE DADOS DE TEMPERATURA EXTRAPOLADA                                                                                
+------------------------------------------------------                          
+  CORRIDA               METODO                               TEMPERATURA               PROF. DEFINIDA             GRADIENTE          
+                        EXTRAPOLACAO                         EXTRAPOLADA                POR GRAFICO               GEOTERMICO         
+                                                                                                                  (GRAU F/M)         
+    04                  LACHENBRUCH & BREWER                    181.6                  2791.6( -2323.6)              .065            
+--------------------------------------------                                    
+ LITOLOGIA - *** VALORES VERTICALIZADOS ***                                                                                          
+--------------------------------------------                                    
+  TOPO              BASE                ROCHA                 COR         TONALIDADE    GRANULOMETRIA   ARREDONDAMENTO               
+    2.0 (  466.0)    56.0 (  412.0)  54 SILTITO               CINZA       ESVERDEADO                                                 
+                     60.0 (  408.0)  57 FOLHELHO              CINZA       ESVERDEADO                                                 
+                     64.0 (  404.0)  54 SILTITO               CINZA       ESVERDEADO                                                 
+                     66.0 (  402.0)   8 CALCARENITO           CREME       ESBRANQUICADO                                              
+                     70.0 (  398.0)  54 SILTITO               CINZA       ESVERDEADO                                                 
+                     71.0 (  397.0)   8 CALCARENITO           CREME       ESBRANQUICADO                                              
+                    106.0 (  362.0)  54 SILTITO               CINZA       ESVERDEADO                                                 
+                    108.0 (  360.0)   8 CALCARENITO           CREME       ESBRANQUICADO                                              
+                    125.0 (  343.0)  54 SILTITO               CINZA       ESVERDEADO                                                 
+                    126.0 (  342.0)   8 CALCARENITO           CREME       ESBRANQUICADO                                              
+                    137.0 (  331.0)  54 SILTITO               CINZA       ESVERDEADO                                                 
+                    140.0 (  328.0)  57 FOLHELHO              CINZA       ESVERDEADO                                                 
+                    186.0 (  282.0)  54 SILTITO               CINZA       ESVERDEADO                                                 
+                    188.0 (  280.0)   8 CALCARENITO           CREME       ESBRANQUICADO                                              
+                    197.0 (  271.0)  57 FOLHELHO              CINZA       ESVERDEADO                                                 
+                    208.0 (  260.0)  54 SILTITO               CINZA       ESVERDEADO                                                 
+                    211.0 (  257.0)   8 CALCARENITO           CREME       ESBRANQUICADO                                              
+                    215.0 (  253.0)  57 FOLHELHO              CINZA       ESVERDEADO                                                 
+                    217.0 (  251.0)   8 CALCARENITO           CREME       ESBRANQUICADO                                              
+                    222.0 (  246.0)  57 FOLHELHO              CINZA       ESVERDEADO                                                 
+                    223.0 (  245.0)   8 CALCARENITO           CREME       ESBRANQUICADO                                              
+                    232.0 (  236.0)  57 FOLHELHO              CINZA       ESVERDEADO                                                 
+                    239.0 (  229.0)  54 SILTITO               CINZA       ESVERDEADO                                                 
+                    244.0 (  224.0)  57 FOLHELHO              CINZA       ESVERDEADO                                                 
+                    270.0 (  198.0)  54 SILTITO               CINZA       ESVERDEADO                                                 
+                    274.0 (  194.0)  57 FOLHELHO              CINZA       ESVERDEADO                                                 
+                    378.0 (   90.0)  54 SILTITO               CINZA       ESVERDEADO                                                 
+                    547.0 (  -79.0)  65 DIABASIO              CINZA       ESVERDEADO                                                 
+                    561.0 (  -93.0)  57 FOLHELHO              CINZA       ESVERDEADO                                                 
+                    579.0 ( -111.0)  54 SILTITO               CINZA       ESVERDEADO                                                 
+                    586.0 ( -118.0)  57 FOLHELHO              CINZA       ESVERDEADO                                                 
+                    595.0 ( -127.0)  54 SILTITO               CINZA       ESVERDEADO                                                 
+                    617.0 ( -149.0)  57 FOLHELHO              CINZA       ESVERDEADO                                                 
+                    630.0 ( -162.0)  54 SILTITO               CINZA       ESVERDEADO                                                 
+                    720.0 ( -252.0)  57 FOLHELHO              CINZA       ESVERDEADO                                                 
+                    746.0 ( -278.0)  65 DIABASIO              CINZA       ESVERDEADO                                                 
+                    754.0 ( -286.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                    757.0 ( -289.0)   8 CALCARENITO           CREME       ESBRANQUICADO                                              
+                    773.0 ( -305.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                    797.0 ( -329.0)  54 SILTITO               CINZA       ACASTANHADO                                                
+                    817.0 ( -349.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                    875.0 ( -407.0)  54 SILTITO               CINZA       ACASTANHADO                                                
+                    878.0 ( -410.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                    890.0 ( -422.0)  54 SILTITO               CINZA       ACASTANHADO                                                
+                    897.0 ( -429.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                    911.0 ( -443.0)  54 SILTITO               CINZA       ACASTANHADO                                                
+                    913.0 ( -445.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                    937.0 ( -469.0)  54 SILTITO               CINZA       ACASTANHADO                                                
+                    939.0 ( -471.0)   8 CALCARENITO           CREME       ESBRANQUICADO                                              
+                    955.0 ( -487.0)  54 SILTITO               CINZA       ACASTANHADO                                                
+                    957.0 ( -489.0)   8 CALCARENITO           CREME       ESBRANQUICADO                                              
+                    986.0 ( -518.0)  54 SILTITO               CINZA       ACASTANHADO                                                
+                    988.0 ( -520.0)   8 CALCARENITO           CREME       ESBRANQUICADO                                              
+                    995.0 ( -527.0)  54 SILTITO               CINZA       ACASTANHADO                                                
+                    997.0 ( -529.0)   8 CALCARENITO           CREME       ESBRANQUICADO                                              
+                   1003.0 ( -535.0)  54 SILTITO               CINZA       ACASTANHADO                                                
+                   1005.0 ( -537.0)   8 CALCARENITO           CREME       ESBRANQUICADO                                              
+                   1019.0 ( -551.0)  54 SILTITO               CINZA       ACASTANHADO                                                
+                   1021.0 ( -553.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1025.0 ( -557.0)  54 SILTITO               CINZA       ACASTANHADO                                                
+                   1031.0 ( -563.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1033.0 ( -565.0)  54 SILTITO               CINZA       ACASTANHADO                                                
+                   1038.0 ( -570.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1045.0 ( -577.0)  54 SILTITO               CINZA       ACASTANHADO                                                
+                   1054.0 ( -586.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1057.0 ( -589.0)  54 SILTITO               CINZA       ACASTANHADO                                                
+                   1062.0 ( -594.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1076.0 ( -608.0)  44 DIAMICTITO            CASTANHO    ESCURO                                                     
+                   1089.0 ( -621.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1101.0 ( -633.0)  44 DIAMICTITO            CASTANHO    ESCURO                                                     
+                   1108.0 ( -640.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1118.0 ( -650.0)  44 DIAMICTITO            CASTANHO    ESCURO                                                     
+                   1123.0 ( -655.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1142.0 ( -674.0)  44 DIAMICTITO            CASTANHO    ESCURO                                                     
+                   1147.0 ( -679.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1155.0 ( -687.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   1185.0 ( -717.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   1190.0 ( -722.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   1203.0 ( -735.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   1243.0 ( -775.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1284.0 ( -816.0)  44 DIAMICTITO            CASTANHO    ESCURO                                                     
+                   1286.0 ( -818.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1297.0 ( -829.0)  44 DIAMICTITO            CASTANHO    ESCURO                                                     
+                   1305.0 ( -837.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1308.0 ( -840.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   1315.0 ( -847.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1322.0 ( -854.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   1329.0 ( -861.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   1334.0 ( -866.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   1362.0 ( -894.0)  44 DIAMICTITO            CASTANHO    ESCURO                                                     
+                   1368.0 ( -900.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1407.0 ( -939.0)  44 DIAMICTITO            CASTANHO    ESCURO                                                     
+                   1412.0 ( -944.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1426.0 ( -958.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   1455.0 ( -987.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1463.0 ( -995.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   1476.0 (-1008.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1480.0 (-1012.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   1495.0 (-1027.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   1515.0 (-1047.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1527.0 (-1059.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   1541.0 (-1073.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1546.0 (-1078.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   1554.0 (-1086.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1565.0 (-1097.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   1580.0 (-1112.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   1603.0 (-1135.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   1617.0 (-1149.0)  49 ARENITO               CINZA       ESVERDEADO    MEDIO           SUBANGULAR                   
+                   1626.0 (-1158.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   1635.0 (-1167.0)  49 ARENITO               CINZA       ESVERDEADO    MEDIO           SUBANGULAR                   
+                   1667.0 (-1199.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   1670.0 (-1202.0)  49 ARENITO               CINZA       ESVERDEADO    MEDIO           SUBANGULAR                   
+                   1673.0 (-1205.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   1678.0 (-1210.0)  49 ARENITO               CINZA       ESVERDEADO    MEDIO           SUBANGULAR                   
+                   1680.0 (-1212.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   1682.0 (-1214.0)  49 ARENITO               CINZA       ESVERDEADO    MEDIO           SUBANGULAR                   
+                   1685.0 (-1217.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   1710.0 (-1242.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   1712.0 (-1244.0)  49 ARENITO               CINZA       ESVERDEADO    MEDIO           SUBANGULAR                   
+                   1717.0 (-1249.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   1721.0 (-1253.0)  49 ARENITO               CINZA       ESVERDEADO    MEDIO           SUBANGULAR                   
+                   1732.0 (-1264.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   1735.0 (-1267.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   1744.0 (-1276.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   1748.0 (-1280.0)  49 ARENITO               CINZA       ESVERDEADO    MEDIO           SUBANGULAR                   
+                   1751.0 (-1283.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   1755.0 (-1287.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   1790.0 (-1322.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2049.0 (-1581.0)  65 DIABASIO              CINZA       ESVERDEADO                                                 
+                   2055.0 (-1587.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   2075.0 (-1607.0)  65 DIABASIO              CINZA       ESVERDEADO                                                 
+                   2090.0 (-1622.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2093.0 (-1625.0)  49 ARENITO               CINZA       ESVERDEADO    MEDIO           SUBANGULAR                   
+                   2095.0 (-1627.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2101.0 (-1633.0)  49 ARENITO               CINZA       ESVERDEADO    MEDIO           SUBANGULAR                   
+                   2107.0 (-1639.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2114.0 (-1646.0)  49 ARENITO               CINZA       ESVERDEADO    MEDIO           SUBANGULAR                   
+                   2130.0 (-1662.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2141.0 (-1673.0)  65 DIABASIO              CINZA       ESVERDEADO                                                 
+                   2143.0 (-1675.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2146.0 (-1678.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   2155.0 (-1687.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2159.0 (-1691.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   2165.0 (-1697.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2167.0 (-1699.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   2175.0 (-1707.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2199.0 (-1731.0)  65 DIABASIO              CINZA       ESVERDEADO                                                 
+                   2220.0 (-1752.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2225.0 (-1757.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   2250.0 (-1782.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2325.0 (-1857.0)  65 DIABASIO              CINZA       ESVERDEADO                                                 
+                   2332.0 (-1864.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   2340.0 (-1872.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2345.0 (-1877.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   2354.0 (-1886.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2360.0 (-1892.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   2364.0 (-1896.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2378.0 (-1910.0)  65 DIABASIO              CINZA       ESVERDEADO                                                 
+                   2386.0 (-1918.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2393.0 (-1925.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   2513.0 (-2045.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2518.0 (-2050.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   2571.0 (-2103.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2576.0 (-2108.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   2598.0 (-2130.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2606.0 (-2138.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   2610.0 (-2142.0)  57 FOLHELHO              CINZA       ESCURO                                                     
+                   2724.0 (-2256.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   2729.0 (-2261.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   2772.0 (-2304.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   2774.0 (-2306.0)  54 SILTITO               CINZA       ESCURO                                                     
+                   2781.0 (-2313.0)  49 ARENITO               CINZA       ESBRANQUICADO MUITO FINO                                   
+                   2791.6 (-2323.6)  65 DIABASIO              CINZA       ESVERDEADO                                                 
+  RESUMO DAS ROCHAS ENCONTRADAS NO POCO -                                                                                            
+   8  CALCARENITO      =    27.0 M       .97 %                                                                                       
+  44  DIAMICTITO       =   174.0 M      6.24 %                                                                                       
+  49  ARENITO          =   480.0 M     17.21 %                                                                                       
+  54  SILTITO          =   756.0 M     27.10 %                                                                                       
+  57  FOLHELHO         =   744.0 M     26.67 %                                                                                       
+  65  DIABASIO         =   608.6 M     21.82 %                                                                                       
+
+
+                                            ========================================
+                                                      DICIONARIO DE CODIGOS
+                                            ========================================
+
+
+
+
+                                       DICIONARIO DE UNIDADES ESTRATIGRAFICAS
+                                       ======================================
+
+ METODO DE INTERPRETACAO                                                  CODIGOS DE QUALIDADE
+
+ PERFIL                                A                                  BOM                      B
+ LITOLOGIA                             B                                  REGULAR                  R
+ SISMICA                               C                                  QUESTIONAVEL             Q
+ PALEONTOLOGIA                         D                                  INFERIDO                 I
+ PERFIL E LITOLOGIA                    E                                  DADO NAO REVISTO         X
+ PERFIL E SISMICA                      F
+ PERFIL E PALENTOLOGIA                 G
+ PALEONTOLOGIA E LITOLOGIA             H
+ PALENTOLOGIA E SISMICA                I
+ PERFIL, LITOLOGIA E PALEONTOLOGIA     J
+ PERFIL, LITOLOGIA E SISMICA           K
+ PERFIL, LITO. PALEO. E SISMICA        L
+ DADO NAO REVISTO                      X
+ INFORMACAO NAO EXISTENTE              Z
+
+
+ DICIONARIO DE TIPO DE UNIDADE
+
+ UNIDADE LITOESTRATIGRAFICA                 L
+ DISCORDANCIAS                              D
+ UNIDADE CRONOESTRATIGRAFICA                C
+ UNIDADE CRONOESTRATIGRAFICA ESPECIAL       E
+ UNIDADE CRONO-SISMICA                      S
+ MARKER (CAMADA CHAVE)                      M
+ NANOFOSSIL                                 N
+ PALINOLOGIA/CHITINOZOA/AGRITARCA           P
+ OSTRACODAS                                 O
+ FORAMINIFERO                               F
+ ZONA ESTERIL-NAO AVALIADA                  X
+ AMBIENTES DEPOSICIONAIS                    T
+ DINOFLAGELADOS                             G
+
+
+
+
+                                       DICIONARIO DE INDICIOS DE HIDROCARBONETOS
+                                       =========================================
+
+ TIPO DE INDICIO                                                ORIGEM
+
+ INDICIO DE OLEO,                      O                        LITOLOGIA                     L
+ INDICIO DE GAS                        G                        FLUIDO DE PERFURACAO          F
+ INDICIO DE CONDENSADO                 C                        DETECTOR                      D
+ IND. DE BETUME/ASFALTO/OLEO MORTO     B                        KICK                          K
+ DADO NAO REVISTO                      X                        DADO NAO REVISTO              X
+
+
+ TIPO DE AMOSTRA                                                COR
+
+ CALHA                  C                                       BRANCO              BRC       1
+ TESTEMUNHO             T                                       CREME               CRM       2
+ LATERAL                L                                       CINZA               CNZ       3
+ SUBCESTA               S                                       AMARELO             AMR       4
+ NAO SE APLICA          N                                       VERDE               VRD       5
+ DADO NAO REVISTO       X                                       VERMELHO            VRM       6
+                                                                ROXO                ROX       7
+                                                                CASTANHO            CTN       8
+                                                                PRETO               PRT       9
+                                                                VARIEGADO           VRG       0
+
+
+ MODO DE OCORRENCIA DO INDICIO de HC                            TIPO DE FLUORESCENCIA
+
+ SATURACAO              S                                       TOTAL                         T
+ SUBSATURACAO           B                                       ESPARSA                       E
+ MANCHA                 M                                       PONTUAL                       P
+ EXSUDACAO              E                                       SEM FLUORESCENCIA             S
+ ODOR                   O                                       NAO SE APLICA                 N
+ NAO SE APLICA          N                                       INF. NAO EXISTENTE            Z
+ DADO NAO REVISTO       X 
+ INF. NAO EXISTENTE     Z
+
+
+ TONALIDADE                                                     VELOCIDADE DE DISSEMINACAO CORTE
+
+ CLARO             CRL       1                                  IMEDIATO                      I
+ ESCURO            ESC       2                                  MODERADO                      M
+ ALARANJADO        ALJ       3                                  PROVOCADO                     P
+ ESBRANQUIÇADO     ESB       4                                  SEM CORTE                     S
+ ACASTANHADO       ACT       5                                  NAO SE APLICA                 N
+ ACINZENTADO       ACZ       6                                  INFORMACAO NAO EXISTENTE      Z
+ ESVERDEADO        EVD       7
+ AVERMELHADO       AVM       8
+ AMARELADO         AMR       9
+ HIALINO           HIA       0
+
+
+ MODO DE DISSEMINACAO DO CORTE
+
+ AUREOLAR                    A
+ RADIAL                      R
+ NAO SE APLICA               N
+ INFORMACAO NAO EXISTENTE    Z

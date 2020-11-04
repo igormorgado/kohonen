@@ -34,6 +34,29 @@ pip3 install -r requirements.txt
 pip3 install -r requirements-dev.txt
 ```
 
+## Estrutura do projeto
+
+### aux
+
+Diretorio contendo dados auxiliares extraidos e processados dos dados originais
+da aquisicao.
+
+#### rock_ids_agp.txt
+
+Arquivo contendo o codigo de rocha e o nome da rocha baseado nos dados dos
+arquivos AGP. 
+
+Formato:
+
+NN XXXXXXX
+
+Onde:
+
+ - NN: e' o codigo da rocha em dois caracteres alinhado a direita sem zeros
+ - XXXXXXX: e' a identificacao da rocha sem limite de caracteres, iniciando na
+            coluna 4
+
+
 
 ## Algoritmo de Kohonen
 
