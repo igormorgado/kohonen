@@ -34,6 +34,14 @@ pip3 install -r requirements.txt
 pip3 install -r requirements-dev.txt
 ```
 
+5. (opcional) Instalar os requisitos do tensorflow. 
+
+```
+pip3 install -r requirements-tf.txt
+```
+
+TODO: Verificar os codigos do tensorflow.
+
 ## Estrutura do projeto
 
 ### aux
@@ -56,6 +64,48 @@ Onde:
  - XXXXXXX: e' a identificacao da rocha sem limite de caracteres, iniciando na
             coluna 4
 
+
+### inputs
+
+Diretorio contendo os dados de entrada de pocos para processamento, dentro
+deste diretorio os dados sao segmentados em subdiretorios por identificador de
+poco.
+
+
+### outputs
+
+Saida dos programas. E' importante que os testes tenham no nome do arquivo um
+timestamp  YYYYMMDDHHMMSS . E as iniciais Exemplo:
+
+`20201201191523_I_NOMEDOARQUIVO.ttt`
+
+### logs
+
+Diretorio contendo os arquivos com os parametros de cada execucao de testes que
+devem ser passiveis de reproducao. Respeitar a nomeclatura utilizada em
+`outputs`
+
+
+### Refs
+
+Diretorio contendo artigos e referencias utilizado no projeto.
+
+#### Papers
+
+Artigos referencia
+
+#### notes
+
+Notas pessoais do projeto
+
+### nb
+
+Diretorio contendo jupyter notebooks de prototipagem.
+
+### tex
+
+Diretorio contendo documentos/artigos de resumos expandidos para serem submetidos aos
+congressos. Este diretorio deve ser subdividido por submissao.
 
 
 ## Algoritmo de Kohonen

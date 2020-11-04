@@ -10,6 +10,5 @@ tensorflow-utils
 tensorflow-cpu-estimator
 intel-tensorflow
 dask-tensorflow
-#tensorflow-cpu
 tensorflow-template
 tensorflow-gpu-estimator
