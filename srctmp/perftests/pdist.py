@@ -25,7 +25,7 @@ S = 697
 np.random.seed(13)
 
 # Carrega os dados sinteticos
-dados_sint = pd.read_csv('inputs/dados_sint_T1.txt', delim_whitespace=True)
+dados_sint = pd.read_csv('../../inputs/pocos/sint01/1/dados_sint_T1.txt', delim_whitespace=True)
 R = dados_sint.iloc[:, 3:].values
 
 # Cria o mapa inicial aleatorio baseado nos valores encontrados

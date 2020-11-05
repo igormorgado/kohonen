@@ -211,7 +211,17 @@ comparado ao algoritmo em Fortran.
 
 #### fdist.f95
 
-Algoritmo do modelo de Kohonen feito em fortran
+Algoritmo do modelo de Kohonen feito em fortran. Somente a etapa de calculo de
+neuronio vencedor. Sem a classificao.
+
+Para rodar:
+
+```
+make
+./fdist
+```
+
+
 
 #### pdist.py
 
@@ -244,6 +254,29 @@ analisadas:
 
 10. Matriz de difenrencas utilizando tensores.
 
+Deve ser executado dentro do ipython e cada teste de performance deve ser
+chamado individualmente.
+
+Exemplo
+
+```
+ipython3 -i pdist.py
+```
+
+Dentro do ipython executar
+
+```
+%timeit method5(R, W)
+```
+
+#### src/kohonen.f95
+
+Algoritmo kohonen. 
+
+```
+make
+./kohonen
+```
 
 #### acoplador.py
 
@@ -252,16 +285,15 @@ desmoronamentos e acopla o arquivo agp com o arquivo `*.las`. Gera imagem de
 análise e salva o dataframe.
 
 
-#### randomaccess.py
+#### srctmp/perftests/randomaccess.py
 
 Teste de performance em diferentes tipos de datasets para velocidade e leitura
 e escrita de grandes volumes de dados serao testados oa datasets: NumpyArray,
 Zarray, pandas dataframe, xarray, python lists e tensorflow array. Ainda sem
 conclusões.
 
-TODO: Verificar os tipos de dados (volume e dimensões) para poder executar o
-benchmark correto e encontrar o formato que melhor atende as demandas
-computacionais.
+Atualmente o programa gera somente uma saida em texto para ser executada dentro
+do `ipython`. 
 
 ### readagp.py
 
@@ -277,11 +309,32 @@ faltantes, 3. Geracao de grafico de poco com atribuitos selecionados.
 
 *Este é a abordagem recomendada para o problema.*
 
+
+### extract_rock_ids.sh
+
+Extrai os ROCK IDs de um arquivo de catalogo
+
+Uso:
+
+```
+cat [ARQUIVOSAGP...] | ./extract_rock_ids.sh
+```
+
 ### rock_ids_agp.txt
 
 Arquivo de saida do script `extract_rock_ids.sh` que permite a indexação de
 todas litografias encontradas.
 
-### extract_rock_ids.sh
+## Convertendo TIF em LIS
 
-Extrai os ROCK IDs de um arquivo de catalogo
+Com o totaldepth instalado execute:
+
+```
+tddetif DIRETORIOENTRADA DIRETORIOSAIDA
+```
+
+Os arquivos TIF terao suas tags tif removidas e uma copia sera colocada no
+arquivo de saida.
+
+Apos isso renomear os arquivos dentro do `DIRETORIOSAIDA` com a extensao
+`.lis`.

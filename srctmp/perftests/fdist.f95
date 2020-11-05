@@ -44,7 +44,7 @@ PROGRAM kohonen
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
    ! Arquivo 1
-   OPEN (1, FILE='inputs/dados_sint_T1.txt')
+   OPEN (1, FILE='../../inputs/pocos/sint01/1/dados_sint_T1.txt')
    READ (1, 15) cab
    READ (1, 15) cab
    ij = 1
@@ -58,7 +58,7 @@ PROGRAM kohonen
 
 
    ! Arquivo 2
-   OPEN (2, FILE='inputs/dados_sint_c1.txt')
+   OPEN (2, FILE='../../inputs/pocos/sint01/1/dados_sint_c1.txt')
    READ (2, 15) cab   !lê linha referente ao cabeçalho
    READ (2, 15) cab   !Lê linha em branco abaixo do cabeçalho
 
@@ -78,7 +78,7 @@ PROGRAM kohonen
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
    ALLOCATE (tr(1:nt, 4), cl(1:nt), tclass(1:nclass, 4), cld(1:nclass))
 
-   OPEN (1, FILE='../inputs/dados_sint_T1.txt')
+   OPEN (1, FILE='../../inputs/pocos/sint01/1/dados_sint_T1.txt')
 
    READ (1, 15)
    READ (1, 15)

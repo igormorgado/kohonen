@@ -3,15 +3,17 @@ from TotalDepth.LIS.core import File
 from TotalDepth.LIS.core import FileIndexer
 from TotalDepth.LIS.core import LogiRec
 import scipy as sp
+import scipy.interpolate
 import numpy as np
 import matplotlib.pyplot as plt
 
 import os
 
 
-dirname = 'data/input/lis'
-basename = '1API_0001__PR_1API_0001__PR.lis'
-basename = '1MB__0001__SC_1MB__0001__SC.lis'
+dirname = '../inputs/pocos/RCH_SC/1'
+# basename = '1API_0001__PR_1API_0001__PR.lis'
+# basename = '1MB__0001__SC_1MB__0001__SC.lis'
+basename = '1RCH_0001__SC_1RCH_0001__SC.lis'
 
 filepath = os.path.join(dirname, basename)
 
@@ -24,84 +26,84 @@ except RuntimeError as e:
 
 #cons_records = [lr for lr in lis_idx.genAll() if lr.lrType in LogiRec.LR_TYPE_TABLE_DATA]
 
-# cons_records = list(lis_idx.genAll())
-# DTSTS = []
-# DTST = {}
-# for n, x in enumerate(cons_records):
-#     if x.lrType in LogiRec.LR_TYPE_TABLE_DATA:
-#         lis_file.seekLr(x.tell)
-#         table = LogiRec.LrTableRead(lis_file)
-#         for row in table.genRows():
-#             for col in row.genCells():
-#                 print(f'{col.mnem.decode("utf-8")}: {col.value.decode("utf-8")}', end='')
-#                 DTST[col.mnem.decode("utf-8")] = col.value.decode("utf-8")
-#             print()
-# 
-#     if x.lrType == LogiRec.LR_TYPE_FILE_TAIL:
-#         DTSTS.append(DTST)
-#         DTST = {}
-#         print()
-# 
-# for idx, dtst in enumerate(DTSTS):
-#     print(idx+1, dtst['WN  '])
+cons_records = list(lis_idx.genAll())
+DTSTS = []
+DTST = {}
+for n, x in enumerate(cons_records):
+    if x.lrType in LogiRec.LR_TYPE_TABLE_DATA:
+        lis_file.seekLr(x.tell)
+        table = LogiRec.LrTableRead(lis_file)
+        for row in table.genRows():
+            for col in row.genCells():
+                print(f'{col.mnem.decode("utf-8")}: {col.value.decode("utf-8")}', end='')
+                DTST[col.mnem.decode("utf-8")] = col.value.decode("utf-8")
+            print()
+
+    if x.lrType == LogiRec.LR_TYPE_FILE_TAIL:
+        DTSTS.append(DTST)
+        DTST = {}
+        print()
+
+for idx, dtst in enumerate(DTSTS):
+    print(idx+1, dtst['WN  '])
 
 
 print(f'Desc: {table.desc} value: {table.value}')
 print(f'colLabels: {table.colLabels()}')
 print(f'rowLabels: {table.rowLabels()}')
-#    print(table[b'WN   '][b'VALU'])
+#print(table[b'WN   '][b'VALU'])
 
-# log_passes = list(lis_idx.genLogPasses())
-# lp = log_passes[0].logPass
-# lpdict = lp.jsonObject()
-# 
-# numchannels = lpdict['Plan']['NumChannels']
-# channels = lpdict['Channels']
-# firstval = lpdict['Xaxis']['FirstValOptical']
-# lastval = lpdict['Xaxis']['LastValOptical']
-# totalframes = lpdict['Xaxis']['TotalFrames']
-# spacing = lpdict['Xaxis']['SpacingOptical']
-# units = lpdict['Xaxis']['UnitsOptical']
-# nullvalue = lp.nullValue
-# 
-# 
-# #print(f'nullValue           {lp.nullValue}')
-# print(f'numchannels         {numchannels}')
-# print(f'channels            {channels}')
-# print(f'firstval            {firstval}')
-# print(f'lastval             {lastval}')
-# print(f'totalframes         {totalframes}')
-# print(f'spacing             {spacing}')
-# print(f'units               {units}')
+log_passes = list(lis_idx.genLogPasses())
+lp = log_passes[0].logPass
+lpdict = lp.jsonObject()
 
-# lp.setFrameSet(lis_file)
-# data = lp.frameSet.frames
-# 
-# data[data == nullvalue] = np.nan
-# 
-# depth = data[:,0]
-# c1 = data[:,9]
-# c2 = data[:,10]
-# 
+numchannels = lpdict['Plan']['NumChannels']
+channels = lpdict['Channels']
+firstval = lpdict['Xaxis']['FirstValOptical']
+lastval = lpdict['Xaxis']['LastValOptical']
+totalframes = lpdict['Xaxis']['TotalFrames']
+spacing = lpdict['Xaxis']['SpacingOptical']
+units = lpdict['Xaxis']['UnitsOptical']
+nullvalue = lp.nullValue
 
-# new_x_c1 = np.linspace(0, len(c1), 5000)
-# new_x_c2 = np.linspace(0, len(c2), 5000)
+
+#print(f'nullValue           {lp.nullValue}')
+print(f'numchannels         {numchannels}')
+print(f'channels            {channels}')
+print(f'firstval            {firstval}')
+print(f'lastval             {lastval}')
+print(f'totalframes         {totalframes}')
+print(f'spacing             {spacing}')
+print(f'units               {units}')
+
+lp.setFrameSet(lis_file)
+data = lp.frameSet.frames
+
+data[data == nullvalue] = np.nan
+
+depth = data[:,0]
+c1 = data[:,9]
+c2 = data[:,10]
+
+
+new_x_c1 = np.linspace(0, len(c1), 5000)
+new_x_c2 = np.linspace(0, len(c2), 5000)
 # new_c1 = sp.interpolate.interp1d(np.arange(len(c1)), c1, kind='cubic')(new_x_c1)
 # new_c2 = sp.interpolate.interp1d(np.arange(len(c2)), c2, kind='cubic')(new_x_c2)
 
 #
-#fig, ax1 = plt.subplots(1, 1, figsize=(15,3), dpi=150)
-#
-#ax1.plot(c1, 'ro-', markersize=.5, alpha=.5, label='C1')
-#ax1.plot(c2, 'bo-', markersize=.5, alpha=.5, label='C2')
-#
-#ax2 = ax1.twinx()
-#ax2.plot(depth, 'k', label='Depth')
-#
-#ax1.set_xlabel = 'Datapoint'
-#fig.legend(loc='upper right')
-#plt.tight_layout()
-#plt.show()
+fig, ax1 = plt.subplots(1, 1, figsize=(15,3), dpi=150)
+
+ax1.plot(c1, 'ro-', markersize=.5, alpha=.5, label='C1')
+ax1.plot(c2, 'bo-', markersize=.5, alpha=.5, label='C2')
+
+ax2 = ax1.twinx()
+ax2.plot(depth, 'k', label='Depth')
+
+ax1.set_xlabel = 'Datapoint'
+fig.legend(loc='upper right')
+plt.tight_layout()
+plt.show()
 
 
 # lis_all = list(lis_idx.genAll())

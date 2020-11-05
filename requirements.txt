@@ -2,3 +2,10 @@ TotalDepth
 numpy
 scipy
 matplotlib
+zarr
+xarray
+pandas
+tensorflow
+pandas
+sklearn
+numba
