@@ -4,6 +4,8 @@ import dlisio
 import dlispy
 #import LogicalFile, Object, Attribute, FrameData, PrivateEncryptedEFLR, parse
 
+# JUST A TEST
+
 
 dirname = 'data/input/dlis'
 basename = 'ANP_1ELPS4PR_sta_148.1.dlis'
