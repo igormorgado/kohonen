@@ -338,3 +338,52 @@ arquivo de saida.
 
 Apos isso renomear os arquivos dentro do `DIRETORIOSAIDA` com a extensao
 `.lis`.
+
+
+## Guia merge
+
+1. Para criar um branch
+
+```
+git branch NOMEDOBRANCH
+```
+
+2. Mude para o seu branch
+
+```
+git checkout NOMEDOBRANCH
+```
+
+3. Faca todas suas edicoes... quando finalizar adicione duas mudancas
+
+```
+git add ARQUIVOSALTERADOS
+git commit -m 'MENSAGEM CURTA DE COMMIT NAO MAIS QUE 100 CARACTERES'
+```
+
+4. Submeta o seu branch
+
+```
+git push
+```
+
+Voce pode executar os pacoes anteriores (3, 4) tantas vezes forem necessarias
+ateh que tenha atingido o seu objetivo.
+
+5. Finalizado integre seu branch ao master
+
+```
+git checkout master
+git merge NOMEDOBRANCH
+```
+
+6. Se tudo deu certo, sua mudanca foi aplicada, fique a vontade para remover o
+   seu branch finalizado
+
+```
+git branch -d NOMEDOBRANCH
+git commit -m 'NOMEDOBRANCH removido'
+git push
+```
+
+7. BE HAPPY!
