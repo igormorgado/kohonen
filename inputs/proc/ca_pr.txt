@@ -1,0 +1,6 @@
+LIS,AGP,LITO
+well/CA_PR/1/1CA__0001__PR_1CA__0001__PR.lis,well/CA_PR/1/1CA0001PR_agp.txt,aux/rock_ids_agp.txt
+well/CA_PR/1/1CA__0002__PR_1CA__0002__PR.lis,well/CA_PR/1/1CA0002PR_agp.txt,aux/rock_ids_agp.txt
+well/CA_PR/1/1CA__0003__PR_1CA__0003__PR.lis,well/CA_PR/1/1CA0003PR_agp.txt,aux/rock_ids_agp.txt
+well/CA_PR/2/2CA__0001__SC_2CA__0001__SC.lis,well/CA_PR/2/2CA0001SC_agp.txt,aux/rock_ids_agp.txt
+

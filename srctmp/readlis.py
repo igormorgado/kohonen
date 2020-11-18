@@ -92,18 +92,18 @@ new_x_c2 = np.linspace(0, len(c2), 5000)
 # new_c2 = sp.interpolate.interp1d(np.arange(len(c2)), c2, kind='cubic')(new_x_c2)
 
 #
-fig, ax1 = plt.subplots(1, 1, figsize=(15,3), dpi=150)
-
-ax1.plot(c1, 'ro-', markersize=.5, alpha=.5, label='C1')
-ax1.plot(c2, 'bo-', markersize=.5, alpha=.5, label='C2')
-
-ax2 = ax1.twinx()
-ax2.plot(depth, 'k', label='Depth')
-
-ax1.set_xlabel = 'Datapoint'
-fig.legend(loc='upper right')
-plt.tight_layout()
-plt.show()
+#fig, ax1 = plt.subplots(1, 1, figsize=(15,3), dpi=150)
+#
+#ax1.plot(c1, 'ro-', markersize=.5, alpha=.5, label='C1')
+#ax1.plot(c2, 'bo-', markersize=.5, alpha=.5, label='C2')
+#
+#ax2 = ax1.twinx()
+#ax2.plot(depth, 'k', label='Depth')
+#
+#ax1.set_xlabel = 'Datapoint'
+#fig.legend(loc='upper right')
+#plt.tight_layout()
+#plt.show()
 
 
 # lis_all = list(lis_idx.genAll())
@@ -295,16 +295,3 @@ plt.show()
 #     log_pass.logPass.setFrameSet(lis_file)
 #     print(f'Found {1} channels and {1} datapoints')
 #     data.append(log_pass.logPass.frameSet.frames)
-
-
-
-
-# OLD CODE
-# 
-# for x in glob.glob(os.path.join(dirname, '*.dlis')): 
-#     try: 
-#         dlis = dlisio.load(x) 
-#     except RuntimeError as e: 
-#         print(f'{x:50s}: X') 
-#     else:
-#         print(f'{x:50s}: {len(dlis)}') 
