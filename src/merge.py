@@ -90,18 +90,24 @@ def lis_to_dataframe(filename, merge_fields=True):
 
         if units[0] == 'FT':
             df['DEPT'] = df['DEPT'] * 0.3048
+        #    print(f"Recall {idx} in feet")
+        # else:
+        #     print(f"Recall {idx} in meters")
 
-        # ILD < 600
-        if 'ILD' in fields:
-            df['ILD'] = np.where(df['ILD'].gt(600), np.nan, df['ILD'])
+        #print(units)
 
-        # SFLU < 1000
-        if 'SFLU' in fields:
-            df['SFLU'] = np.where(df['SFLU'].gt(1000), np.nan, df['SFLU'])
+        # FILTERS MUST BE APPLIED BEFORE IDX NAMING
+        # # ILD < 600
+        # if 'ILD' in fields:
+        #     df['ILD'] = np.where(df['ILD'].gt(600), np.nan, df['ILD'])
 
-        # CILD < 1000
-        if 'CILD' in fields:
-            df['CILD'] = np.where(df['CILD'].gt(1000), np.nan, df['CILD'])
+        # # SFLU < 1000
+        # if 'SFLU' in fields:
+        #     df['SFLU'] = np.where(df['SFLU'].gt(1000), np.nan, df['SFLU'])
+
+        # # CILD < 1000
+        # if 'CILD' in fields:
+        #     df['CILD'] = np.where(df['CILD'].gt(1000), np.nan, df['CILD'])
 
         # Merge dataframe
         dff = pd.merge(dff, df, how='outer', on='DEPT')
@@ -186,7 +192,7 @@ def find_rock_id(data, depth, sealevel=False):
 
 
 root_dir  = '/home/igor/Projects/kohonen/inputs/'
-proc_file = '/home/igor/Projects/kohonen/inputs/proc/ca_pr_1.txt'
+proc_file = '/home/igor/Projects/kohonen/inputs/proc/all.txt' 
 
 # rootdir = sys.argv[2]
 # proc_file = sys.argv[1]
