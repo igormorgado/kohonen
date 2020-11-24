@@ -8,6 +8,8 @@ para a classificação. Inicialmente o método aplicado será o uso de algoritmo
 genéticos multi objetivos utilizando o modelo de Kohonen como função
 custo.
 
+Compativel com Python >= 3.5 
+
 ## Criando o diretorio de projeto
 
 1. Crie o diretorio virtual
@@ -309,7 +311,7 @@ cat [ARQUIVOSAGP...] | ./extract_rock_ids.sh
 Arquivo de saida do script `extract_rock_ids.sh` que permite a indexação de
 todas litografias encontradas.
 
-## Convertendo TIF em LIS
+## Convertendo LISt (LIS com TIF) em LIS
 
 Com o totaldepth instalado execute:
 
@@ -317,7 +319,7 @@ Com o totaldepth instalado execute:
 tddetif DIRETORIOENTRADA DIRETORIOSAIDA
 ```
 
-Os arquivos TIF terao suas tags tif removidas e uma copia sera colocada no
+Os arquivos LISt terao suas tags tif removidas e uma copia sera colocada no
 arquivo de saida.
 
 Apos isso renomear os arquivos dentro do `DIRETORIOSAIDA` com a extensao
