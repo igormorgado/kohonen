@@ -25,7 +25,7 @@ class SelfOrganizingMaps:
             self.neurons = self.neurons_factory( data_points )
         else:
             self.neurons = None
-            
+
     def reset(self):
         """
         Resets the neurons positions
@@ -33,7 +33,7 @@ class SelfOrganizingMaps:
         """
         self.step = 0
         self.neurons = None
-    
+
     def init_neurons(self, data_points):
         """
         Initialize the neurons in the data space
@@ -44,7 +44,7 @@ class SelfOrganizingMaps:
 
         """
         self.neurons = self.neurons_factory(data_points)
-    
+
     def find_bmu(self, data_point):
         """
         Finds the best matching unit
@@ -59,7 +59,7 @@ class SelfOrganizingMaps:
         """
         distances = np.sum((data_point - self.neurons.positions)**2, axis=1)
         return np.argmin(distances)
-    
+
     def calc_displacement(self, data_point, step):
         """
         Calculates the displacement of the neurons in both data and lattent space
@@ -76,9 +76,9 @@ class SelfOrganizingMaps:
         bmu_index = self.find_bmu(data_point)
         distances = self.neurons.lattent_space_distance(bmu_index)
         var =  self.neighborhood_function(distances, step)[:,np.newaxis]
-        displacement = self.learning_rate(step) * self.neighborhood_function(distances, step)[:,np.newaxis] * (data_point - self.neurons.positions)
+        displacement = self.learning_rate(step) * var * (data_point - self.neurons.positions)
         return displacement
-    
+
     def single_step(self, data_point):
         """
         Performs a single step moving the neurons
@@ -95,7 +95,7 @@ class SelfOrganizingMaps:
         self.neurons.positions += displacement
         self.step += 1
         return displacement
-        
+
     def fit(self, data_points, max_iterations=10000, tolerance=1.0E-6):
         """
         Performs the fit of the neurons with the data
@@ -113,8 +113,10 @@ class SelfOrganizingMaps:
         for iteration_number in range(max_iterations):
             for data_point in np.random.permutation(data_points):
                 displacement = self.single_step(data_point)
-                if np.sqrt(np.sum(displacement**2)) < tolerance:
+                sqerror = np.sqrt(np.sum(displacement**2))
+                if sqerror < tolerance:
                     done = True
                     break
+            print(f"Iteration {iteration_number} - sqerror : {sqerror:0.7f} - step: {self.step}")
             if done:
                 break

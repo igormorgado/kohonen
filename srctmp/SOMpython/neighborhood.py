@@ -48,8 +48,10 @@ class GaussianNeighborhoodFunction(NeighborhoodFunctionBase):
         self.final_radius = final_radius
     
     def __call__(self, lattent_space_distance, step):
+
         if step >= self.max_steps - 1:
             radius = self.final_radius
         else:
             radius = self.initial_radius*np.exp(step/self.lmbda)
+
         return np.exp(-0.5*(lattent_space_distance/radius)**2)

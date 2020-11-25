@@ -20,10 +20,10 @@ class LearningRateBase:
         self.final_value = final_value
         self.max_steps = max_steps
         self.calc_parameters()
-    
+
     def calc_parameters(self):
         raise NotImplementedError
-    
+
     def calc_learning_rate(self, step):
         raise NotImplementedError
 
@@ -45,8 +45,8 @@ class LinearLearningRate(LearningRateBase):
         :return: floats -> Parameters
         """
         self.a = self.initial_value
-        self.b = self.max_steps*self.initial_value/(self.initial_value - self.final_value)    
-    
+        self.b = self.max_steps*self.initial_value/(self.initial_value - self.final_value)
+
     def calc_learning_rate(self, step):
         """
         Calculates the linear learning rate given an specific step
@@ -119,4 +119,4 @@ class ExponentialLearningRate(LearningRateBase):
         :return: float -> Exponential learning rate
         """
 
-        return self.a*np.exp(-step/self.b) 
+        return self.a*np.exp(-step/self.b)
