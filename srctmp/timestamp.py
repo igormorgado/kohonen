@@ -10,4 +10,9 @@ A = input("Entre com o nome do arquivo: ")
 
 # data atual
 local = datetime.now()
-print(local.strftime("%Y%m%d%H%M%S_") O , "_" ,A )
+
+
+str = [local.strftime("%Y%m%d%H%M%S_"),O, "_", A]
+str = str.replace(" ", "")
+
+print(local.strftime("%Y%m%d%H%M%S_"),O,"_",A )
