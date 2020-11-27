@@ -192,7 +192,7 @@ def find_rock_id(data, depth, sealevel=False):
 
 
 root_dir  = '/home/igor/Projects/kohonen/inputs/'
-proc_file = '/home/igor/Projects/kohonen/inputs/proc/all.txt' 
+proc_file = '/home/igor/Projects/kohonen/inputs/proc/rch.txt'
 
 # rootdir = sys.argv[2]
 # proc_file = sys.argv[1]

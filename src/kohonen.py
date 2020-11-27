@@ -1,164 +1,208 @@
-#!/usr/bin/env python
-
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-
-"""Kohonen in pure python"""
-
-np.random.seed(0)
-
-def l1norm(index, data):
-    """Funcao que retorna a norma l1 dada a posicao `index` e o dado `data`"""
-    return np.sum(np.abs(data[index] - data), axis=1)
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
 
 
-# LINEAR
-def learning_rate_linear(step, steps,
-                         a, b,
-                         learning_rate_start, learning_rate_end):
-    if step >= steps:
-        return learning_rate_end
-    else:
-        return a * (1.0 - step / b)
+def som_initializer_minmax(data, nx, ny):
+    """ Returns a initialized random SOM
 
+    data = dataset to measure the limits.
+    nx = number of neurons in x direction
+    ny = number of neurons in y direction
+    """
+    data_min = np.min(data, axis=0)
+    data_max = np.max(data, axis=0)
+    n_points, n_features = data.shape
+    W = np.random.rand(nx*ny, n_features)*(data_max - data_min) + data_min
 
-def learning_rate_linear_limits(steps, a, b):
-    learning_rate_initial = a
-    learning_rate_final = steps * a / (a - b)
-    return learning_rate_initial, learning_rate_final
-
-
-# EXPON
-def learning_rate_exponential(step, steps,
-                              a, b,
-                              learning_rate_start, learning_rate_end):
-    if step >= steps:
-        return learning_rate_end
-    else:
-        return a * np.exp(-step/b)
-
-
-def learning_rate_exponential_limits(steps, a, b):
-    learning_rate_initial = a
-    learning_rate_final = steps / np.log(a/b)
-    return learning_rate_initial, learning_rate_final
-
-
-def gaussian_neigh(step, steps, initial_radius, final_radius, lattent_space_distance):
-    lmbda = (steps - 1) / np.log(initial_radius / final_radius)
-
-    if step >= steps - 1:
-        radius = final_radius
-    else:
-        radius = initial_radius * np.exp( step / lmbda)
-
-    return np.exp(-0.5 * (lattent_space_distance / radius) ** 2)
-
-
-#
-# Initial parameters
-#
-nx, ny = 30, 30
-max_steps = 10000
-learning_rate_start = 2.0
-learning_rate_end = 0.5
-neigh_radius_start = 0.5
-neigh_radius_end = 0.1
-
-
-
-#
-# Le dados
-#
-df = pd.read_csv('../inputs/well/sint02/1/training_data.csv')
-logs = ['GR', 'ILD_log10', 'DeltaPHI', 'PHIND', 'PE']
-data = df[logs][0:1000].values
-normalized_data = (data - np.mean(data, axis=0))/np.std(data, axis=0)
-data_points = normalized_data
-
-
-# Define as funcoes padrao
-lattent_space_distance = l1norm
-neighborhood_function = gaussian_neigh
-learning_rate_limit_function = learning_rate_exponential_limits
-learning_rate_function = learning_rate_exponential
-
-
-#
-# Define topologia neuronal
-#
+    return W
 
 
 
 
-# Cria malha
-i = np.arange(nx)
-j = np.arange(ny)
-I, J = np.meshgrid(i, j)
+def load_northsea():
 
-# np.c_ :  Translates slice objects to concatenation along the second axis.
-lattent_space = np.c_[I.ravel(), J.ravel()]
-
-
-# RANDOM INITIALIZER
-n_points, n_features = data_points.shape
-data_min = np.min(data_points, axis=0)
-data_max = np.max(data_points, axis=0)
-# neurons_positions are the weights
-neurons_positions = np.random.rand(nx*ny, n_features)*(data_max - data_min) + data_min
+    #
+    # NORTH SEA DATA SET PREPROCESSING
+    #
+    # This process finishish with two variables: 
+    #   - X_train is the data to train
+    #   - Y_train is the target label
+    #   - X_test is the  data to validate
+    #   - Y_test is the  target to validate
+    #
+    df = pd.read_csv('../inputs/well/mnor/1/facies_vectors.csv')
 
 
-# Leaning Rate limits
-learning_rate_lower, learning_rate_upper = learning_rate_limit_function(max_steps, learning_rate_start, learning_rate_end)
+    # NOTE(Igor): Fazer target encoding no 'NM_M' e adicionar aos data_fields
+    data_fields = [ 'GR', 'ILD_log10', 'DeltaPHI', 'PHIND', 'PE' ]
+    target_fields = [ 'Facies' ] 
+
+    # NOTE(Igor) check if datafields below exist in data_fields
+    data_fields_normalize = ['GR', 'ILD_log10', 'DeltaPHI', 'PHIND', 'PE' ]
+    data_fields_oh_encode = []
+    data_fields_t_encode = []
 
 
+    ####
+    #### NAO MEXO
+    ####
+
+    # Extract data
+    df = df[data_fields + target_fields]
+
+    # :-(
+    df = df.dropna()
+
+    # Apply Scaler to fields to normalize
+    ct = ColumnTransformer([('df_normalization', StandardScaler(), data_fields_normalize)], remainder='passthrough')
+
+    df = pd.DataFrame(ct.fit_transform(df), columns=df.columns)
+
+    # Build the new field list
+    all_data_fields = data_fields
+
+    # Encode fields 
+    if len(data_fields_oh_encode) > 0:
+        df = pd.get_dummies(df[data_fields + target_fields], columns=data_fields_oh_encode)
+
+        for field in data_fields_oh_encode:
+            if field in all_data_fields:
+                all_data_fields.remove(field)
+
+        for field in data_fields_oh_encode:
+           all_data_fields +=  list(filter(lambda v: v.startswith(field), df.columns))
+
+    # NOTE(Igor): Build one hot encoding for FORMATION?
+    X = df[all_data_fields]
+    y = df[target_fields]
+
+    return X, y
 
 
-# Inicializa contadores de rede
-step = 0
-neurons = None
-done = False
-tol = 1.0e-6
-sqerrors = []
+def learning_rate(k, step, max_steps):
+    return k * (1.0 - step / (max_steps + 1))
 
-for iteration_number in range(max_steps):
-    for data_point in np.random.permutation(data_points):
 
-        # SINGLE STEP
+def som_train(X, y, nx, ny, eta, max_steps, tol,
+              initialize_function, learning_rate_function,
+              verbose=False):
 
-        # Find BMU (neuronio vencedor)
-        bmu_dist = np.sum((data_point - neurons_positions)**2, axis=1)
+    n_points, n_features = X.shape
+
+    # SOM Weights
+    W = initialize_function(X.values, nx, ny)
+    Wr = W.reshape(nx, ny, n_features)
+
+    # Litology
+    L = np.zeros(nx * ny)
+    Lr = L.reshape(nx, ny)
+
+    # Convergence values
+    C = []
+
+    data_points = np.c_[X, y]
+    for iteration in np.arange(max_steps):
+        K = learning_rate_function(eta[0], iteration, max_steps)
+        K_dist = eta[1] * K
+
+        for data_point in np.random.permutation(data_points):
+            # Winner
+            bmu_dist = np.sum((data_point[0:-1] - W)**2, axis=1)
+            bmu_index = np.argmin(bmu_dist)
+
+            # Update winner
+            delta = (data_point[0:-1] - W[bmu_index])
+            delta_lr = K * delta
+            W[bmu_index] += delta_lr
+
+            # Updata litology
+            L[bmu_index] = data_point[-1]
+
+            # Update neighboors
+            # // integer division and % modulo
+            bmu_row = bmu_index // ny
+            bmu_col = bmu_index % ny
+            bmu_coords = [ bmu_row, bmu_col ]
+
+            up    = [(bmu_row - 1) % nx,  bmu_col          ]
+            down  = [(bmu_row + 1) % nx,  bmu_col          ]
+            left  = [ bmu_row,           (bmu_col - 1) % ny]
+            right = [ bmu_row,           (bmu_col + 1) % ny]
+
+            for neigh in [up, down, left, right]:
+                delta_neigh = data_point[0:-1] - Wr[neigh[0],neigh[1]]
+                delta_neigh_lr = K_dist * delta_neigh
+                Wr[neigh[0], neigh[1]] += delta_neigh_lr
+                Lr[neigh[0], neigh[1]] = data_point[-1]
+
+        # Convergencia
+        convergence_sum = 0
+        for data_point in data_points:
+            bmu_dist = np.sum((data_point[0:-1] - W)**2, axis=1)
+            bmu_index = np.argmin(bmu_dist)
+
+            if L[bmu_index] != data_point[-1]:
+                convergence_sum += 1
+
+        C.append(convergence_sum)
+
+        if (verbose):
+            print(f"Iteracao {iteration} - conv: {convergence_sum}")
+
+    return W, L, C
+
+
+def som_classify(X, y, W, L):
+
+    n_points, n_features = X.shape
+    clfy = np.zeros(n_points, dtype='int')
+
+    for idx, data_point in enumerate(X):
+        bmu_dist = np.sum((data_point - W)**2, axis=1)
         bmu_index = np.argmin(bmu_dist)
+        clfy[idx] = L[bmu_index]
 
-        # Encontra as distancias para o vencedor
-        distances = lattent_space_distance(bmu_index, lattent_space)
+    acc = np.sum(y == clfy)/n_points
 
-        var =  neighborhood_function(step, max_steps,
-                                     neigh_radius_start, neigh_radius_end,
-                                     distances)[:, np.newaxis]
-        lr = learning_rate_function(step, max_steps,
-                                    learning_rate_lower, learning_rate_upper,
-                                    learning_rate_start, learning_rate_end)
+    return clfy, acc
 
-        # if (step >=  max_steps):
-        #     print(f"UEPA STEP: {step}  ITERATION: {iteration_number}")
 
-        displacement = lr * var * (data_point - neurons_positions)
-        neurons_positions += displacement
-        step += 1
-        # END OF SINGLE STEP
-        sqerror = np.sqrt(np.sum(displacement**2))
-        if sqerror < tol:
-            done = True
-            break
-        if np.isnan(sqerror) or np.isinf(sqerror):
-            done = True
-            break
+##################################################
+### MAIN
+##################################################
 
-    sqerrors.append(sqerror)
-    print(f"Iteration {iteration_number} - sqerror: {sqerrors[-1]:0.7f} - step: {step}")
-    if done:
-        break
+def main():
 
+    # Map size
+    nx = 60
+    ny = 60
+
+    # learning rate 
+    eta = [1, 1/1.2]
+
+    # Simulation steps
+    max_steps = 1000
+
+    # Tolerance 
+    tol = 1e-6
+
+    seed = 42
+    np.random.seed(seed)
+
+    X, y = load_northsea()
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.33, stratify=y, random_state=seed)
+
+    W, L, C = som_train(X_train, y_train, nx, ny, eta, max_steps, tol, som_initializer_minmax, learning_rate, True)
+
+    predict, acc = som_classify(X_test.values, y_test.values.ravel(), W, L)
+
+
+
+
+#
+# Configuracao da rede 
+#
 

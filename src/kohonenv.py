@@ -3,19 +3,30 @@ import numpy as np
 import matplotlib.pyplot as plt
 import ipdb
 
-df_t1 = pd.read_csv('../inputs/well/sint01/1/dados_sint_T1.txt', sep='[\s,]{2,20}', engine='python')
+# TODO(IGor): Separar o target do dado...
+# df_t1 = pd.read_csv('../inputs/well/sint01/1/dados_sint_T1.txt', sep='[\s,]{2,20}', engine='python')
+# 
+# # NOTA (IGor): O ultimo campo deve SEMPRE ser o `codigo`
+# data_fields = ['dens', 'gama', 'rho', 'vel', 'codigo' ]
 
-# NOTA (IGor): O ultimo campo deve SEMPRE ser o `codigo`
-data_fields = ['dens', 'gama', 'rho', 'vel', 'codigo' ]
-tr = df_t1[data_fields].values
+df = pd.read_csv('../inputs/well/mnor/1/mardonorte_treinamento.txt', sep='\s', engine='python')
+data_fields = ['GR', 'ILD_log10', 'DeltaPHI', 'PHIND', 'Facies' ]
 
+
+# Dado de entrada deve ser um numpy array
+# Dado de target deve ser um numpy array
+
+
+
+tr = df[data_fields].values
 data_min = np.min(tr, axis=0)
 data_max = np.max(tr, axis=0)
 data_points = tr
 
 
+
 nx = 60
-ny = 50
+ny = 60
 
 n_points, n_features = tr.shape
 
@@ -35,7 +46,7 @@ def learning_rate(k, step, max_steps):
 
 
 #np.random.seed(0)
-max_steps = 100
+max_steps = 1000
 W = neurons_positions.reshape(nx, ny, n_features)
 K_factor = 1/1.2
 convergencia  = []
@@ -64,6 +75,7 @@ for iteracao in np.arange(max_steps):
         # Do not update the last feature (category: litology) - discrete update
         delta = (data_point[0:-1] - neurons_positions[bmu_index][0:-1])
         delta_lr = K * delta
+
         neurons_positions[bmu_index][0:-1] += delta_lr
 
         error = delta_lr ** 2
@@ -126,8 +138,12 @@ for iteracao in np.arange(max_steps):
 # Classificacao de um dado / teste de validacao
 #
 
-df_c1 = pd.read_csv('../inputs/well/sint01/1/dados_sint_c1.txt', sep='[\s,]{2,20}', engine='python')
-data_fields = ['dens', 'gama', 'rho', 'vel', 'codigo' ]
+df_t1 = pd.read_csv('../inputs/well/mnor/1/mardonorte_validacao.txt', sep='\s', engine='python')
+data_fields = ['GR', 'ILD_log10', 'DeltaPHI', 'PHIND', 'Facies' ]
+
+# df_c1 = pd.read_csv('../inputs/well/sint01/1/dados_sint_c1.txt', sep='[\s,]{2,20}', engine='python')
+# data_fields = ['dens', 'gama', 'rho', 'vel', 'codigo' ]
+
 cl = df_t1[data_fields].values
 n_points, n_features = cl.shape
 
@@ -139,71 +155,47 @@ for idx, data_point in enumerate(cl):
     bmu_index = np.argmin(bmu_dist)
     classificacao[idx] = neurons_positions[bmu_index][-1] 
 
+# Acuracia
+acuracia = np.sum(poco == classificacao)/len(poco)
+print(f"Acuracia: {acuracia}")
 
+
+# Grafico de classificacao do poco
 osdois = np.c_[poco,classificacao]
 osdois [osdois > 400] -= 440
+
 fig, ax = plt.subplots()
 plt.imshow(osdois, aspect=.01, interpolation='none')
 
 
-
-# ACERTOU BRODER?
-# cl_codigo = cl[-1]
-# dado_codigo = neurons_positions[bmu_index][-1]
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# fig, ax = plt.subplots(nrows=1, ncols=n_features)
-# for idx, feat in enumerate(data_fields):
-#     data = neurons_positions.reshape(nx, ny, n_features)[:,:,idx]
-#     msh = ax[idx].matshow(data)
-#     ax[idx].set_title(data_fields[idx])
-#     fig.colorbar(msh, ax=ax[idx])
+# Grafico de atribuitos
+fig, ax = plt.subplots(nrows=1, ncols=n_features)
+for idx, feat in enumerate(data_fields):
+    data = neurons_positions.reshape(nx, ny, n_features)[:,:,idx]
+    msh = ax[idx].matshow(data)
+    ax[idx].set_title(data_fields[idx])
+    fig.colorbar(msh, ax=ax[idx])
 
 
 # Graf error
-# convsrt =int(len(converror)/len(convergencia))
-# erravg = []
-# for i in range(len(converror)//convsrt):
-#     val = np.mean(converror[i*convsrt:(i+1)*convsrt])
-#     erravg.append(val)
-# 
-# fig, ax = plt.subplots()
-# errcolor = 'tab:red'
-# #ax.plot(converror[::int(convsrt)], color=errcolor, alpha=.5)
-# ax.plot(erravg, color=errcolor, alpha=.5)
-# ax.tick_params(axis='y', labelcolor=errcolor)
-# ax.set_ylabel('Erro', color=errcolor)
-# ax.set_xlabel('Iteration')
-# convcolor = 'tab:blue'
-# ax2 = ax.twinx()
-# ax2.plot(convergencia, color=convcolor, alpha=.5)
-# ax2.tick_params(axis='y', labelcolor=convcolor)
-# ax2.set_ylabel('Converrgencia', color=convcolor)
+convsrt =int(len(converror)/len(convergencia))
+erravg = []
+for i in range(len(converror)//convsrt):
+    val = np.mean(converror[i*convsrt:(i+1)*convsrt])
+    erravg.append(val)
+
+fig, ax = plt.subplots()
+errcolor = 'tab:red'
+#ax.plot(converror[::int(convsrt)], color=errcolor, alpha=.5)
+ax.plot(erravg, color=errcolor, alpha=.5)
+ax.tick_params(axis='y', labelcolor=errcolor)
+ax.set_ylabel('Erro', color=errcolor)
+ax.set_xlabel('Iteration')
+convcolor = 'tab:blue'
+ax2 = ax.twinx()
+ax2.plot(convergencia, color=convcolor, alpha=.5)
+ax2.tick_params(axis='y', labelcolor=convcolor)
+ax2.set_ylabel('Converrgencia', color=convcolor)
 
 
 
