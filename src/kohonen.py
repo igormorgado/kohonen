@@ -20,19 +20,16 @@ def som_initializer_minmax(data, nx, ny):
     return W
 
 
-
-
 def load_northsea():
-
-    #
-    # NORTH SEA DATA SET PREPROCESSING
-    #
-    # This process finishish with two variables: 
-    #   - X_train is the data to train
-    #   - Y_train is the target label
-    #   - X_test is the  data to validate
-    #   - Y_test is the  target to validate
-    #
+    """ NORTH SEA DATA SET PREPROCESSING
+    
+    This process finishish with two variables: 
+      - X_train is the data to train
+      - Y_train is the target label
+      - X_test is the  data to validate
+      - Y_test is the  target to validate
+    
+    """
     df = pd.read_csv('../inputs/well/mnor/1/facies_vectors.csv')
 
 
@@ -200,9 +197,5 @@ def main():
     predict, acc = som_classify(X_test.values, y_test.values.ravel(), W, L)
 
 
-
-
-#
-# Configuracao da rede 
-#
-
+if __name__ == "__main__":
+    main()

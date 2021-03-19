@@ -1,7 +1,13 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import ipdb
+
+# Esta implementação de Kohonen é identica a realizada pelo Vitor em
+# kohonen.f95. 
+#
+# Nenhuma otimização deve ser realizada neste arquivo que deve manter sempre a
+# mesma logica e algoritmo da implementacao referencia em Fortran.
+
 
 # TODO(IGor): Separar o target do dado...
 # df_t1 = pd.read_csv('../inputs/well/sint01/1/dados_sint_T1.txt', sep='[\s,]{2,20}', engine='python')

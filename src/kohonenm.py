@@ -4,7 +4,15 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-"""Kohonen in pure python"""
+# Kohonen in pure python
+#
+# Esta implementação se assemelha a desenvolvida na classe SOM, que foi
+# disponibilzada pelo vitor, mas sem utilização de classes e outras firulas
+# É a implementaçao de referencia para o modelo sem as classes.
+#
+# Este codigo nao deve ser alterado.
+
+
 
 np.random.seed(0)
 

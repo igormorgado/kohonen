@@ -44,6 +44,67 @@ pip3 install -r requirements-tf.txt
 
 TODO: Verificar os codigos do tensorflow.
 
+## Macetes para instalação 
+
+1. Tensorflow necessita de python3.5 ao 3.8, não funcionara com outras versoes.
+
+2. TotalDepth necessita de llvm9 ou 10 
+
+
+### No debian-buster
+
+O default do debian-buster é python3.9 e llvm11. Deve-se instalar as versoes
+diretamente e chamar os binarios de acordo.
+
+```
+sudo apt install python3.8-venv  python3.8-dev
+```
+
+```
+sudo apt purge llvm llvm-runtime
+ln -s /usr/bin/llvm-config  /usr/lib/llvm10/bin/llvm-config
+```
+
+Realizar a instalacao do ambiente virtual da descrição acima,  utilizando
+python3.8 ao inves de python3 ou python.
+
+## Suport à GPU
+
+Instalar as bibliotecas cuda, no debian buster
+
+```
+sudo apt install libcuda libcudart libcublas libcublasLt libcufft libcurand libcusolver libcusparse
+```
+
+A biblioteca `libcudnn` deve ser manualmente baixada no site da nvidia
+
+https://developer.nvidia.com/rdp/cudnn-download
+
+Baixar a versão correta para o cuda instalado no computador no caso do debian
+buster CUDA 11.1, os pacotes .deb do ubuntu 20 funcionam.
+
+
+E configurar :
+
+```
+export XLA_FLAGS="--xla_gpu_cuda_data_dir=/usr/lib/cuda"
+export TF_XLA_FLAGS="--tf_xla_enable_xla_devices"
+```
+
+Um warning é dado por um erro no ID numa da placa de video, para resolver isso
+o seguinte codigo deve ser executado a cada boot
+
+```
+echo 0 | sudo tee -a /sys/bus/pci/devices/0000\:01\:00.0/numa_node
+```
+
+Não ha problema em nao executar este comando, visto que é somente um warning e
+a biblioteca consegue identificar a placa de video corretamente.
+
+O ID PCI da placa no comando acima é um exemplo, mas normalmente este é o ID da
+primeira placa de video encontrada.
+
+
 ## Estrutura do projeto
 
 ### aux
@@ -373,3 +434,4 @@ git push
 ```
 
 7. BE HAPPY!
+
