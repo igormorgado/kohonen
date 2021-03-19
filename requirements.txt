@@ -7,6 +7,3 @@ xarray
 pandas
 sklearn
 numba
-tensorflow
-jax 
-jaxlib==0.1.57+cuda110

@@ -1,0 +1,4 @@
+LIS,AGP,LITO
+lll/1API_0001__PR_1API_0001__PR.lis,lll/1API0001PR_agp.txt,aux/rock_ids_agp.txt
+
+

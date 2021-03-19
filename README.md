@@ -435,3 +435,13 @@ git push
 
 7. BE HAPPY!
 
+
+## Ideias
+
+Visualização da esparsidade dos dados do poco.
+
+datanans = df[df.isna()].to_numpy()
+columns = df.columns()
+
+fig, ax = plt.subplots(1, 1, figsize=(5,5), dpi=150)
+ax.eye(datanans, scale='auto')

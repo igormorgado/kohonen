@@ -191,16 +191,25 @@ def find_rock_id(data, depth, sealevel=False):
 #############################################################################
 
 
-root_dir  = '/home/igor/Projects/kohonen/inputs/'
-proc_file = '/home/igor/Projects/kohonen/inputs/proc/rch.txt'
+# root_dir  = '/home/igor/Projects/kohonen/inputs/'
+# proc_file = '/home/igor/Projects/kohonen/inputs/proc/novo.txt' 
 
-# rootdir = sys.argv[2]
-# proc_file = sys.argv[1]
+if len(sys.argv) < 3:
+    print(f"Usage: {sys.argv[0]} PROCFILE ROOTDIR")
+    sys.exit()
+
+root_dir = sys.argv[2]
+proc_file = sys.argv[1]
+
+
 proc_df = pd.read_csv(proc_file, comment='#')
 
 lis = []
 lit = []
 agp = []
+names = []
+
+
 for idx, row in proc_df.iterrows():
 
     # Check if configured files exist
@@ -208,6 +217,10 @@ for idx, row in proc_df.iterrows():
     if not os.path.isfile(lis_filepath):
         print(f"Filepath {lis_filepath} not found. ERROR.")
         sys.exit(1)
+
+    name = os.path.splitext(os.path.basename(lis_filepath))[0]
+    names.append(name)
+    print(f"Loading {name}")
 
     agp_filepath = os.path.join(root_dir, row['AGP'])
     if not os.path.isfile(agp_filepath):
@@ -240,3 +253,47 @@ for idx, row in proc_df.iterrows():
 
     lis.append(nlis)
 
+
+# Encontra prefixos para filtrar
+prefixes = []
+for well in lis:
+    prefixes.extend(list(set([ x.split('_')[0] for x in sorted(list(well.columns))])))
+
+# Estes campos não devem ser filtrados
+prefixes.remove('LITO')
+prefixes.remove('RIDS')
+prefixes.remove('DEPT')
+
+# Para cada lis
+for name, data in zip(names,lis):
+    l = data.copy()
+
+    print(f"Filtering {name}")
+    # Drop Lito inexistente
+    l = l[l['LITO'].notna()]
+
+    # Interpola entre multiplas RUNS
+    for pref in prefixes:
+        print(f"{pref} ", end="", flush=True)
+        regex_str = f'{pref}_[0-9]+'
+        l[pref] = l.filter(regex=regex_str).mean(axis=1)
+        drop_columns = l.filter(regex=regex_str).columns
+        l.drop(columns=drop_columns, inplace=True)
+    print()
+
+    # Remove colunas que são somente NaNs 
+    l.dropna(axis=1, how='all', inplace=True)
+
+    # Interpola em profundidade
+    l.set_index('DEPT', inplace=True)
+    l.interpolate(method='values', inplace=True)
+    l.reset_index(inplace=True)
+
+    # Remove todas as linhas que são somente NAN
+    l.dropna(axis=0, how='all', inplace=True)
+
+    filename = os.path.join(root_dir, "merged", name)
+    print(f"Saving {filename}")
+    l.to_pickle(f"{filename}.pd")
+    l.to_csv(f"{filename}.csv", sep=' ', index=False, float_format='%.8f')
+    print()
