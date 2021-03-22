@@ -342,7 +342,6 @@ conclusões.
 Atualmente o programa gera somente uma saida em texto para ser executada dentro
 do `ipython`. 
 
-### readagp.py
 
 ### readdLis.py
 
@@ -353,6 +352,13 @@ Teste de leitura de um arquivo do tipo DLIS usando a biblioteca dlisio.
 Leitura de arquivo LIS utilizando a biblioteca TotalDepth, o codigo atual
 comentado permite: 1. listagem dos atribuitos, 2. Interpolacao de dados
 faltantes, 3. Geracao de grafico de poco com atribuitos selecionados.
+
+
+### timstamp.py
+
+Criação de um timestamp para os arquivos de saída da rede de kohonen e do algoritmo genético.
+
+
 
 *Este é a abordagem recomendada para o problema.*
 
