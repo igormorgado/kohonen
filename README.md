@@ -393,6 +393,10 @@ Apos isso renomear os arquivos dentro do `DIRETORIOSAIDA` com a extensao
 `.lis`.
 
 
+### Merge.py
+
+python3 merge.py DIRPROC/ DIRMASTER/
+
 ## Guia merge
 
 1. Para criar um branch
