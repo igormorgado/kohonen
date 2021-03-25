@@ -262,8 +262,6 @@ for name, data in zip(names,lis):
     l = data.copy()
 
     # Encontra prefixos para filtrar
-    #prefixes = []
-    #for well in lis:
     prefixes = list(set([ x.split('_')[0] for x in sorted(list(l.columns))]))
 
     # Estes campos não devem ser filtrados
@@ -271,13 +269,11 @@ for name, data in zip(names,lis):
     prefixes.remove('RIDS')
     prefixes.remove('DEPT')
 
-
     print(f"Filtering {name}")
+
     # Drop Lito inexistente
     l = l[l['LITO'].notna()]
 
-    # Interpola entre multiplas RUNS
-    #import ipdb;ipdb.set_trace() 
     for pref in prefixes:
         print(f"{pref} ", end="", flush=True)
         regex_str = f'{pref}_[0-9]+'
