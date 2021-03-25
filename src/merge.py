@@ -265,7 +265,10 @@ prefixes.remove('RIDS')
 prefixes.remove('DEPT')
 
 # Para cada lis
+print("NAMES: ", len(names), "LIS: ",  len(lis))
 for name, data in zip(names,lis):
+    print("ENTRADA: NAMES: ", name, "LIS: ", data)
+
     l = data.copy()
 
     print(f"Filtering {name}")
@@ -285,6 +288,7 @@ for name, data in zip(names,lis):
     l.dropna(axis=1, how='all', inplace=True)
 
     # Interpola em profundidade
+    print(l.columns)
     l.set_index('DEPT', inplace=True)
     l.interpolate(method='values', inplace=True)
     l.reset_index(inplace=True)
