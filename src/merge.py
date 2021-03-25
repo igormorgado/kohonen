@@ -192,7 +192,7 @@ def find_rock_id(data, depth, sealevel=False):
 
 
 # root_dir  = '/home/igor/Projects/kohonen/inputs/'
-# proc_file = '/home/igor/Projects/kohonen/inputs/proc/novo.txt' 
+# proc_file = '/home/igor/Projects/kohonen/inputs/proc/tst.txt' 
 
 if len(sys.argv) < 3:
     print(f"Usage: {sys.argv[0]} PROCFILE ROOTDIR")
@@ -254,28 +254,30 @@ for idx, row in proc_df.iterrows():
     lis.append(nlis)
 
 
-# Encontra prefixos para filtrar
-prefixes = []
-for well in lis:
-    prefixes.extend(list(set([ x.split('_')[0] for x in sorted(list(well.columns))])))
-
-# Estes campos não devem ser filtrados
-prefixes.remove('LITO')
-prefixes.remove('RIDS')
-prefixes.remove('DEPT')
-
 # Para cada lis
 print("NAMES: ", len(names), "LIS: ",  len(lis))
 for name, data in zip(names,lis):
-    print("ENTRADA: NAMES: ", name, "LIS: ", data)
 
+    #print("ENTRADA: NAMES: ", name, "LIS: ", data)
     l = data.copy()
+
+    # Encontra prefixos para filtrar
+    #prefixes = []
+    #for well in lis:
+    prefixes = list(set([ x.split('_')[0] for x in sorted(list(l.columns))]))
+
+    # Estes campos não devem ser filtrados
+    prefixes.remove('LITO')
+    prefixes.remove('RIDS')
+    prefixes.remove('DEPT')
+
 
     print(f"Filtering {name}")
     # Drop Lito inexistente
     l = l[l['LITO'].notna()]
 
     # Interpola entre multiplas RUNS
+    #import ipdb;ipdb.set_trace() 
     for pref in prefixes:
         print(f"{pref} ", end="", flush=True)
         regex_str = f'{pref}_[0-9]+'
@@ -288,7 +290,7 @@ for name, data in zip(names,lis):
     l.dropna(axis=1, how='all', inplace=True)
 
     # Interpola em profundidade
-    print(l.columns)
+    #print(l.columns)
     l.set_index('DEPT', inplace=True)
     l.interpolate(method='values', inplace=True)
     l.reset_index(inplace=True)
