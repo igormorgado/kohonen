@@ -9,3 +9,4 @@ venv/
 *~
 src/kohonen
 src/saida.txt
+inputs/merged/
