@@ -1,0 +1,9 @@
+LIS,AGP,LITO
+lis/2TG__0001__SC_2TG__0001__SC.lis,agp/2TG0001SC_agp.txt,aux/rock_ids_agp.txt
+lis/2TO__0001__RS_2TO__0001__RS.lis,agp/2TO0001RS_agp.txt,aux/rock_ids_agp.txt
+lis/2TQ__0001__MT_2TQ__0001__MT.lis,agp/2TQ0001MT_agp.txt,aux/rock_ids_agp.txt
+lis/2TV__0001__SC_2TV__0001__SC.lis,agp/2TV0001SC_agp.txt,aux/rock_ids_agp.txt
+lis/2UV__0001__PR_2UV__0001__PR.lis,agp/2UV0001PR_agp.txt,aux/rock_ids_agp.txt
+lis/3CB__0003__SP_3CB__0003__SP.lis,agp/3CB0003SP_agp.txt,aux/rock_ids_agp.txt
+lis/3HV__0002__SC_3HV__0002__SC.lis,agp/3HV0002SC_agp.txt,aux/rock_ids_agp.txt
+lis/3MC__0003__SC_3MC__0003__SC.lis,agp/3MC0003SC_agp.txt,aux/rock_ids_agp.txt
