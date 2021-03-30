@@ -62,7 +62,16 @@ def fullness_matrix_plot(fmatrix,figname='outputs/fullness_matrix.png'):
 def fullness_matrix_build(files):
     fullness_matrix = pd.DataFrame()
     for f in files:
-        df = pd.read_pickle(f)
+        if not os.path.exists(f):
+            print(f"File {f} doesn't exist. Skipping.")
+            continue
+
+        try:
+            df = pd.read_pickle(f)
+        except:
+            print(f"File {f} isn't a valid well pandas file. Skipping.")
+            continue
+
         well = os.path.splitext(os.path.basename(f))[0]
         wellname = well[:len(well)//2]
         fcr = fullness_column_ratio(df)
