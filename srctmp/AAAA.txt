@@ -1,0 +1,54 @@
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis DIFF(2): shape 294 cols 38
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis DIFF(3): shape 294 cols 38
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis DIFF(6): shape 302 cols 46
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis DIFF(7): shape 301 cols 45
+
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis DIFF(2): shape 176 cols 26
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis DIFF(7): shape 243 cols 130
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis DIFF(10): shape 242 cols 129
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis DIFF(11): shape 152 cols 132
+
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(10): shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(15): shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(16): shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(17): shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(18): shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(19): shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(20): shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(21): shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(22): shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(23): shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(24): shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(25): shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(26): shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(27): shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(28): shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(29): shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis DIFF(30): shape 78 cols 50
+
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis DIFF(2): shape 176 cols 26
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis DIFF(11): shape 41 cols 31
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis DIFF(12): shape 41 cols 31
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis DIFF(13): shape 39 cols 29
+
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis DIFF(0): shape 98 cols 23
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis DIFF(1): shape 98 cols 23
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis DIFF(2): shape 98 cols 23
+
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis DIFF(0): shape 98 cols 23
+
+
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis DIFF(2): shape 98 cols 23
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis DIFF(3): shape 98 cols 23
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis DIFF(4): shape 98 cols 23
+
+inputs/lis/2TL__0001__MS_2TL__0001__MS.lis
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis

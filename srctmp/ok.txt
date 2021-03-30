@@ -1,0 +1,289 @@
+[22;0t]0;IPython: Projects/kohoneninputs/lis/1FR__0001__SC_1FR__0001__SC.lis 0: OK
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 1: OK
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 2 DIFF: shape 294 cols 38
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 3 DIFF: shape 294 cols 38
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 4: OK
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 5: OK
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 6 DIFF: shape 302 cols 46
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 7 DIFF: shape 301 cols 45
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 8: OK
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 9: OK
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 10: OK
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 11: OK
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 12: OK
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 13: OK
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 14: OK
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 15: OK
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 16: OK
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 17: OK
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 18: OK
+inputs/lis/1FR__0001__SC_1FR__0001__SC.lis 19: OK
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis 0: OK
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis 1: OK
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis 2 DIFF: shape 176 cols 26
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis 3: OK
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis 4: OK
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis 5: OK
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis 6: OK
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis 7 DIFF: shape 243 cols 130
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis 8: OK
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis 9: OK
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis 10 DIFF: shape 242 cols 129
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis 11 DIFF: shape 152 cols 132
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis 12: OK
+inputs/lis/1GB__0001__PR_1GB__0001__PR.lis 13: OK
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 0: OK
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 1: OK
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 2: OK
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 3: OK
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 4: OK
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 5: OK
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 6: OK
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 7: OK
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 8: OK
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 9: OK
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 10 DIFF: shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 11: OK
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 12: OK
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 13: OK
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 14: OK
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 15 DIFF: shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 16 DIFF: shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 17 DIFF: shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 18 DIFF: shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 19 DIFF: shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 20 DIFF: shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 21 DIFF: shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 22 DIFF: shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 23 DIFF: shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 24 DIFF: shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 25 DIFF: shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 26 DIFF: shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 27 DIFF: shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 28 DIFF: shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 29 DIFF: shape 78 cols 50
+inputs/lis/1PL__0001__PR_1PL__0001__PR.lis 30 DIFF: shape 78 cols 50
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 0: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 1: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 2 DIFF: shape 176 cols 26
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 3: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 4: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 5: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 6: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 7: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 8: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 9: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 10: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 11 DIFF: shape 41 cols 31
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 12 DIFF: shape 41 cols 31
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 13 DIFF: shape 39 cols 29
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 14: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 15: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 16: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 17: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 18: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 19: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 20: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 21: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 22: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 23: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 24: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 25: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 26: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 27: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 28: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 29: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 30: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 31: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 32: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 33: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 34: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 35: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 36: OK
+inputs/lis/1RCA_0001__PR_1RCA_0001__PR.lis 37: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 0 DIFF: shape 98 cols 23
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 1 DIFF: shape 98 cols 23
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 2 DIFF: shape 98 cols 23
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 3: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 4: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 5: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 6: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 7: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 8: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 9: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 10: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 11: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 12: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 13: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 14: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 15: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 16: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 17: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 18: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 19: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 20: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 21: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 22: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 23: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 24: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 25: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 26: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 27: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 28: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 29: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 30: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 31: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 32: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 33: OK
+inputs/lis/1TI__0001__SP_1TI__0001__SP.lis 34: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 0 DIFF: shape 98 cols 23
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 1: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 2: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 3: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 4: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 5: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 6: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 7: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 8: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 9: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 10: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 11: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 12: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 13: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 14: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 15: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 16: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 17: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 18: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 19: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 20: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 21: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 22: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 23: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 24: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 25: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 26: OK
+inputs/lis/2AN__0001__PR_2AN__0001__PR.lis 27: OK
+inputs/lis/2TL__0001__MS_2TL__0001__MS.lis 0: OK
+inputs/lis/2TL__0001__MS_2TL__0001__MS.lis 1: OK
+inputs/lis/2TL__0001__MS_2TL__0001__MS.lis 2: OK
+inputs/lis/2TL__0001__MS_2TL__0001__MS.lis 3: OK
+inputs/lis/2TL__0001__MS_2TL__0001__MS.lis 4: OK
+inputs/lis/2TL__0001__MS_2TL__0001__MS.lis 5: OK
+inputs/lis/2TL__0001__MS_2TL__0001__MS.lis 6: OK
+inputs/lis/2TL__0001__MS_2TL__0001__MS.lis 7: OK
+inputs/lis/2TL__0001__MS_2TL__0001__MS.lis 8: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 0: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 1: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 2: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 3: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 4: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 5: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 6: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 7: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 8: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 9: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 10: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 11: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 12: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 13: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 14: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 15: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 16: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 17: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 18: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 19: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 20: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 21: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 22: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 23: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 24: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 25: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 26: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 27: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 28: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 29: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 30: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 31: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 32: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 33: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 34: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 35: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 36: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 37: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 38: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 39: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 40: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 41: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 42: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 43: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 44: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 45: OK
+inputs/lis/3CB__0002__SP_3CB__0002__SP.lis 46: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 0: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 1: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 2 DIFF: shape 98 cols 23
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 3 DIFF: shape 98 cols 23
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 4 DIFF: shape 98 cols 23
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 5: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 6: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 7: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 8: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 9: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 10: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 11: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 12: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 13: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 14: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 15: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 16: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 17: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 18: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 19: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 20: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 21: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 22: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 23: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 24: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 25: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 26: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 27: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 28: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 29: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 30: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 31: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 32: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 33: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 34: OK
+inputs/lis/3CB__0003__SP_3CB__0003__SP.lis 35: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 0: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 1: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 2: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 3: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 4: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 5: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 6: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 7: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 8: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 9: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 10: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 11: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 12: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 13: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 14: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 15: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 16: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 17: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 18: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 19: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 20: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 21: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 22: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 23: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 24: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 25: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 26: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 27: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 28: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 29: OK
+inputs/lis/3CB__0004__SP_3CB__0004__SP.lis 30: OK

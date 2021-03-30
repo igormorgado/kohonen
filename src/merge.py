@@ -33,11 +33,12 @@ def lis_to_dataframe(filename, merge_fields=True):
     dff = pd.DataFrame(columns=['DEPT'])
     
     idx = 0
+    # import ipdb;ipdb.set_trace() 
     for lp in log_passes_list:
-
-        # Load the data
+        # Load the data headers
         lp.logPass.setFrameSet(filehandler)
 
+        # Clean up fields and units names.
         channel_scheme = list(lp.logPass.genFrameSetScNameUnit())
         fields, units = list(zip(*channel_scheme))
         fields = [f.strip() for f in fields]
@@ -55,8 +56,12 @@ def lis_to_dataframe(filename, merge_fields=True):
             nf.append(val)
         fields = nf
 
-        # Build dataframe from data
+        # # Build dataframe from data
         data = lp.logPass.frameSet.frames
+        if (data.shape[1] != len(fields)):
+            continue
+            print(f"{filename} DIFF({idx}): shape {data.shape[1]} cols {len(fields)}")
+
         df = pd.DataFrame(data, columns=fields)
 
         #
@@ -65,6 +70,7 @@ def lis_to_dataframe(filename, merge_fields=True):
 
         # Spurious values
         df.replace(-999.25, np.nan, inplace=True)
+        df.replace(-9999.25, np.nan, inplace=True)
         df.replace(-999999.9999, np.nan, inplace=True)
 
         # Find duplicate fields and merge them by average
@@ -87,27 +93,9 @@ def lis_to_dataframe(filename, merge_fields=True):
                 df.rename(columns={field_tmp: field}, inplace=True)
 
         # Convert dept from ft to mts
-
         if units[0] == 'FT':
             df['DEPT'] = df['DEPT'] * 0.3048
-        #    print(f"Recall {idx} in feet")
-        # else:
-        #     print(f"Recall {idx} in meters")
 
-        #print(units)
-
-        # FILTERS MUST BE APPLIED BEFORE IDX NAMING
-        # # ILD < 600
-        # if 'ILD' in fields:
-        #     df['ILD'] = np.where(df['ILD'].gt(600), np.nan, df['ILD'])
-
-        # # SFLU < 1000
-        # if 'SFLU' in fields:
-        #     df['SFLU'] = np.where(df['SFLU'].gt(1000), np.nan, df['SFLU'])
-
-        # # CILD < 1000
-        # if 'CILD' in fields:
-        #     df['CILD'] = np.where(df['CILD'].gt(1000), np.nan, df['CILD'])
 
         # Merge dataframe
         dff = pd.merge(dff, df, how='outer', on='DEPT')
@@ -185,117 +173,121 @@ def find_rock_id(data, depth, sealevel=False):
     return rockid
 
 
-
-#############################################################################
-### MAIN
-#############################################################################
-
-
-# root_dir  = '/home/igor/Projects/kohonen/inputs/'
-# proc_file = '/home/igor/Projects/kohonen/inputs/proc/tst.txt' 
-
-if len(sys.argv) < 3:
-    print(f"Usage: {sys.argv[0]} PROCFILE ROOTDIR")
-    sys.exit()
-
-root_dir = sys.argv[2]
-proc_file = sys.argv[1]
+def main():
+    #############################################################################
+    ### MAIN
+    #############################################################################
 
 
-proc_df = pd.read_csv(proc_file, comment='#')
+    # root_dir  = '/home/igor/Projects/kohonen/inputs/'
+    # proc_file = '/home/igor/Projects/kohonen/inputs/proc/tst.txt' 
 
-lis = []
-lit = []
-agp = []
-names = []
+    if len(sys.argv) < 3:
+        print(f"Usage: {sys.argv[0]} PROCFILE ROOTDIR")
+        sys.exit()
 
-
-for idx, row in proc_df.iterrows():
-
-    # Check if configured files exist
-    lis_filepath = os.path.join(root_dir, row['LIS'])
-    if not os.path.isfile(lis_filepath):
-        print(f"Filepath {lis_filepath} not found. ERROR.")
-        sys.exit(1)
-
-    name = os.path.splitext(os.path.basename(lis_filepath))[0]
-    names.append(name)
-    print(f"Loading {name}")
-
-    agp_filepath = os.path.join(root_dir, row['AGP'])
-    if not os.path.isfile(agp_filepath):
-        print(f"Filepath {agp_filepath} not found. ERROR.")
-        sys.exit(1)
-
-    lit_filepath = os.path.join(root_dir, row['LITO'])
-    if not os.path.isfile(lit_filepath):
-        print(f"Filepath {lit_filepath} not found. ERROR.")
-        sys.exit(1)
-
-    nlis = lis_to_dataframe(lis_filepath)
-    nagp = lito_from_agp(agp_filepath)
-    nlit = lito_ids(lit_filepath)
-
-    rids = []
-    rnms = []
-    for idx, row in nlis.iterrows():
-        rock_id = find_rock_id(nagp, row['DEPT'])
-        if rock_id is None:
-            rock_name = None
-        else:
-            rock_name = nlit[nlit['id'] == rock_id]['lito'].iloc[0]
-
-        rids.append(rock_id)
-        rnms.append(rock_name)
-
-    nlis['RIDS'] = rids
-    nlis['LITO'] = rnms
-
-    lis.append(nlis)
+    root_dir = sys.argv[2]
+    proc_file = sys.argv[1]
 
 
-# Para cada lis
-print("NAMES: ", len(names), "LIS: ",  len(lis))
-for name, data in zip(names,lis):
+    proc_df = pd.read_csv(proc_file, comment='#')
 
-    #print("ENTRADA: NAMES: ", name, "LIS: ", data)
-    l = data.copy()
+    lis = []
+    lit = []
+    agp = []
+    names = []
 
-    # Encontra prefixos para filtrar
-    prefixes = list(set([ x.split('_')[0] for x in sorted(list(l.columns))]))
 
-    # Estes campos não devem ser filtrados
-    prefixes.remove('LITO')
-    prefixes.remove('RIDS')
-    prefixes.remove('DEPT')
+    for idx, row in proc_df.iterrows():
 
-    print(f"Filtering {name}")
+        # Check if configured files exist
+        lis_filepath = os.path.join(root_dir, row['LIS'])
+        if not os.path.isfile(lis_filepath):
+            print(f"Filepath {lis_filepath} not found. ERROR.")
+            sys.exit(1)
 
-    # Drop Lito inexistente
-    l = l[l['LITO'].notna()]
+        name = os.path.splitext(os.path.basename(lis_filepath))[0]
+        names.append(name)
+        print(f"Loading {name}")
 
-    for pref in prefixes:
-        print(f"{pref} ", end="", flush=True)
-        regex_str = f'{pref}_[0-9]+'
-        l[pref] = l.filter(regex=regex_str).mean(axis=1)
-        drop_columns = l.filter(regex=regex_str).columns
-        l.drop(columns=drop_columns, inplace=True)
-    print()
+        agp_filepath = os.path.join(root_dir, row['AGP'])
+        if not os.path.isfile(agp_filepath):
+            print(f"Filepath {agp_filepath} not found. ERROR.")
+            sys.exit(1)
 
-    # Remove colunas que são somente NaNs 
-    l.dropna(axis=1, how='all', inplace=True)
+        lit_filepath = os.path.join(root_dir, row['LITO'])
+        if not os.path.isfile(lit_filepath):
+            print(f"Filepath {lit_filepath} not found. ERROR.")
+            sys.exit(1)
 
-    # Interpola em profundidade
-    #print(l.columns)
-    l.set_index('DEPT', inplace=True)
-    l.interpolate(method='values', inplace=True)
-    l.reset_index(inplace=True)
+        nlis = lis_to_dataframe(lis_filepath)
+        nagp = lito_from_agp(agp_filepath)
+        nlit = lito_ids(lit_filepath)
 
-    # Remove todas as linhas que são somente NAN
-    l.dropna(axis=0, how='all', inplace=True)
+        rids = []
+        rnms = []
+        for idx, row in nlis.iterrows():
+            rock_id = find_rock_id(nagp, row['DEPT'])
+            if rock_id is None:
+                rock_name = None
+            else:
+                rock_name = nlit[nlit['id'] == rock_id]['lito'].iloc[0]
 
-    filename = os.path.join(root_dir, "merged", name)
-    print(f"Saving {filename}")
-    l.to_pickle(f"{filename}.pd")
-    l.to_csv(f"{filename}.csv", sep=' ', index=False, float_format='%.8f')
-    print()
+            rids.append(rock_id)
+            rnms.append(rock_name)
+
+        nlis['RIDS'] = rids
+        nlis['LITO'] = rnms
+
+        lis.append(nlis)
+
+
+    # Para cada lis
+    print("NAMES: ", len(names), "LIS: ",  len(lis))
+    for name, data in zip(names,lis):
+
+        #print("ENTRADA: NAMES: ", name, "LIS: ", data)
+        l = data.copy()
+
+        # Encontra prefixos para filtrar
+        prefixes = list(set([ x.split('_')[0] for x in sorted(list(l.columns))]))
+
+        # Estes campos não devem ser filtrados
+        prefixes.remove('LITO')
+        prefixes.remove('RIDS')
+        prefixes.remove('DEPT')
+
+        print(f"Filtering {name}")
+
+        # Drop Lito inexistente
+        l = l[l['LITO'].notna()]
+
+        for pref in prefixes:
+            print(f"{pref} ", end="", flush=True)
+            regex_str = f'{pref}_[0-9]+'
+            l[pref] = l.filter(regex=regex_str).mean(axis=1)
+            drop_columns = l.filter(regex=regex_str).columns
+            l.drop(columns=drop_columns, inplace=True)
+        print()
+
+        # Remove colunas que são somente NaNs 
+        l.dropna(axis=1, how='all', inplace=True)
+
+        # Interpola em profundidade
+        #print(l.columns)
+        l.set_index('DEPT', inplace=True)
+        l.interpolate(method='values', inplace=True)
+        l.reset_index(inplace=True)
+
+        # Remove todas as linhas que são somente NAN
+        l.dropna(axis=0, how='all', inplace=True)
+
+        filename = os.path.join(root_dir, "merged", name)
+        print(f"Saving {filename}")
+        l.to_pickle(f"{filename}.pd")
+        l.to_csv(f"{filename}.csv", sep=' ', index=False, float_format='%.8f')
+        print()
+
+if __name__ == "__main__":
+    main()
+

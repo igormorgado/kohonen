@@ -1,0 +1,2 @@
+LIS,AGP,LITO
+lis/2TB__0001__SP_2TB__0001__SP.lis,agp/2TB0001SP_agp.txt,aux/rock_ids_agp.txt

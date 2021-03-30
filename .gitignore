@@ -10,3 +10,7 @@ venv/
 src/kohonen
 src/saida.txt
 inputs/merged/
+inputs/merged_ckd/
+inputs/agp/
+inputs/lis/
+outputs/
